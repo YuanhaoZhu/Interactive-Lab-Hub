@@ -67,14 +67,39 @@ buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
+current_time = time.strftime("%H:%M:%S") 
+
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    y = top
+    draw.text((x, y), current_time, font=font, fill="#FFFFFF")
 
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
-    cur_time = time.strftime("%H:%M:%S") 
-    y = top
-    draw.text((x, y), cur_time, font=font, fill="#FFFFFF")
+
+    if buttonB.value and not buttonA.value:# just button A pressed
+        y = top
+        draw.text((x, y), "IP", font=font, fill="#FFFFFF")
+        y += font.getsize()[1]
+        draw.text((x, y), "WTTR", font=font, fill="#FFFF00")
+        y += font.getsize()[1]
+        draw.text((x, y), "USD", font=font, fill="#0000FF")
+        y += font.getsize()[1]
+        draw.text((x, y), "Temp", font=font, fill="#FF00FF")
+
+    if buttonA.value and not buttonB.value:# just button B pressed
+       y = top
+       draw.rectangle((0, 0, width, height), outline=0, fill=0)
+       timezone = timezone - 1
+       clock = datetime.now() + timedelta(hours=timezone)
+       draw.text((x,y), "Subtracted one hour", font=font, fill="#FFFFFF")
+    
+    
+    
+    if not buttonA.value and not buttonB.value:
+       draw.text((x,y), clock, font=font, fill="#FFFFFF")
+
+
 
     # if buttonB.value and not buttonA.value:  # just button A pressed
     #     disp.fill(screenColor) # set the screen to the users color
