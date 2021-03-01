@@ -95,7 +95,9 @@ while True:
 
     
     if not buttonA.value and not buttonB.value:
-       draw.text((x,y), clock, font=font, fill="#FFFFFF")
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        y = top
+        draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
 
 
 
