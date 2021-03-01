@@ -60,15 +60,34 @@ font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+buttonA.switch_to_input()
+buttonB.switch_to_input()
 
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
-    cur_time = time.strftime("%m/%d/%Y %H:%M:%S") 
+    cur_time = time.strftime("%H:%M:%S") 
     y = top
     draw.text((x, y), cur_time, font=font, fill="#FFFFFF")
+
+
+    if buttonA.value and buttonB.value:
+        backlight.value = False  # turn off backlight
+    else:
+        backlight.value = True  # turn on backlight
+    if buttonB.value and not buttonA.value:  # just button A pressed
+        display.fill(screenColor) # set the screen to the users color
+    if buttonA.value and not buttonB.value:  # just button B pressed
+        display.fill(color565(255, 255, 255))  # set the screen to white
+    if not buttonA.value and not buttonB.value:  # none pressed
+        display.fill(color565(0, 255, 0))  # green
+
+
+
 
     # Display image.
     disp.image(image, rotation)
