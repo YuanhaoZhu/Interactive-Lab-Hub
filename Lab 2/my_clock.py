@@ -74,17 +74,12 @@ while True:
     y = top
     draw.text((x, y), cur_time, font=font, fill="#FFFFFF")
 
-
-    if buttonA.value and buttonB.value:
-        backlight.value = False  # turn off backlight
-    else:
-        backlight.value = True  # turn on backlight
     if buttonB.value and not buttonA.value:  # just button A pressed
         display.fill(screenColor) # set the screen to the users color
-    if buttonA.value and not buttonB.value:  # just button B pressed
-        display.fill(color565(255, 255, 255))  # set the screen to white
-    if not buttonA.value and not buttonB.value:  # none pressed
-        display.fill(color565(0, 255, 0))  # green
+    # if buttonA.value and not buttonB.value:  # just button B pressed
+    #     display.fill(color565(255, 255, 255))  # set the screen to white
+    # if not buttonA.value and not buttonB.value:  # none pressed
+    #     display.fill(color565(0, 255, 0))  # green
 
 
 
