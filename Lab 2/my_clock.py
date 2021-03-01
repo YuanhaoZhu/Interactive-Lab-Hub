@@ -80,11 +80,11 @@ while True:
     if buttonB.value and not buttonA.value:# just button A pressed
         y = top
         draw.text((x, y), "IP", font=font, fill="#FFFFFF")
-        y += font.getsize()
+        y += font.getsize("IP")[1]
         draw.text((x, y), "WTTR", font=font, fill="#FFFF00")
-        y += font.getsize()
+        y += font.getsize("WTTR")[1]
         draw.text((x, y), "USD", font=font, fill="#0000FF")
-        y += font.getsize()
+        y += font.getsize("USD")[1]
         draw.text((x, y), "Temp", font=font, fill="#FF00FF")
 
     if buttonA.value and not buttonB.value:# just button B pressed
