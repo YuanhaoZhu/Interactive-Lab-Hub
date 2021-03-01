@@ -92,9 +92,7 @@ while True:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         y = top
         draw.text((x, y), "exercise", font=font, fill="#FFFFFF")
-       
-    
-    
+
     
     if not buttonA.value and not buttonB.value:
        draw.text((x,y), clock, font=font, fill="#FFFFFF")
@@ -112,5 +110,5 @@ while True:
 
 
     # Display image.
-    disp.image(image, rotation)
-    time.sleep(1)
+    #disp.image(image, rotation)
+    #time.sleep(1)
