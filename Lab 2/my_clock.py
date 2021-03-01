@@ -74,6 +74,7 @@ while True:
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     y = top
     draw.text((x, y), current_time, font=font, fill="#FFFFFF")
+    disp.image(image, rotation)
 
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
 
@@ -81,6 +82,7 @@ while True:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         y = top
         draw.text((x, y), "snack", font=font, fill="#FFFFFF")
+        disp.image(image, rotation)
         # y += font.getsize("IP")[1]
         # draw.text((x, y), "WTTR", font=font, fill="#FFFF00")
         # y += font.getsize("WTTR")[1]
@@ -92,21 +94,14 @@ while True:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         y = top
         draw.text((x, y), "exercise", font=font, fill="#FFFFFF")
+        disp.image(image, rotation)
 
     
     if not buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         y = top
         draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
-
-
-
-    # if buttonB.value and not buttonA.value:  # just button A pressed
-    #     disp.fill(screenColor) # set the screen to the users color
-    if buttonA.value and not buttonB.value:  # just button B pressed
-        disp.fill(color565(255, 255, 255))  # set the screen to white
-    # if not buttonA.value and not buttonB.value:  # none pressed
-    #     disp.fill(color565(0, 255, 0))  # green
+        disp.image(image, rotation)
 
 
 
