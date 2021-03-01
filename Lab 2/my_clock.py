@@ -4,6 +4,7 @@ import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
+import webcolors
 
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
@@ -74,10 +75,10 @@ while True:
     y = top
     draw.text((x, y), cur_time, font=font, fill="#FFFFFF")
 
-    if buttonB.value and not buttonA.value:  # just button A pressed
-        display.fill(screenColor) # set the screen to the users color
-    # if buttonA.value and not buttonB.value:  # just button B pressed
-    #     display.fill(color565(255, 255, 255))  # set the screen to white
+    # if buttonB.value and not buttonA.value:  # just button A pressed
+    #     display.fill(screenColor) # set the screen to the users color
+    if buttonA.value and not buttonB.value:  # just button B pressed
+        display.fill(color565(255, 255, 255))  # set the screen to white
     # if not buttonA.value and not buttonB.value:  # none pressed
     #     display.fill(color565(0, 255, 0))  # green
 
