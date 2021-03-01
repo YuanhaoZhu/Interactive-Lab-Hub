@@ -75,6 +75,7 @@ while True:
     y = top
     draw.text((x, y), current_time, font=font, fill="#FFFFFF")
     disp.image(image, rotation)
+    time.sleep(1)
 
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
 
@@ -83,6 +84,7 @@ while True:
         y = top
         draw.text((x, y), "snack", font=font, fill="#FFFFFF")
         disp.image(image, rotation)
+        time.sleep(1)
         # y += font.getsize("IP")[1]
         # draw.text((x, y), "WTTR", font=font, fill="#FFFF00")
         # y += font.getsize("WTTR")[1]
@@ -95,6 +97,7 @@ while True:
         y = top
         draw.text((x, y), "exercise", font=font, fill="#FFFFFF")
         disp.image(image, rotation)
+        time.sleep(1)
 
     
     if not buttonA.value and not buttonB.value:
@@ -102,6 +105,7 @@ while True:
         y = top
         draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
         disp.image(image, rotation)
+        time.sleep(1)
 
 
 
