@@ -67,7 +67,7 @@ buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
-current_time = time.strftime("%H:%M:%S") 
+current_time = time.strftime("%H:%M") 
 
 while True:
     # Draw a black filled box to clear the image.
