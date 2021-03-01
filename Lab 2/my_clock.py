@@ -78,8 +78,9 @@ while True:
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
 
     if buttonB.value and not buttonA.value:# just button A pressed
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
         y = top
-        draw.text((x, y), "IP", font=font, fill="#FFFFFF")
+        draw.text((x, y), "snack", font=font, fill="#FFFFFF")
         # y += font.getsize("IP")[1]
         # draw.text((x, y), "WTTR", font=font, fill="#FFFF00")
         # y += font.getsize("WTTR")[1]
@@ -88,11 +89,10 @@ while True:
         # draw.text((x, y), "Temp", font=font, fill="#FF00FF")
 
     if buttonA.value and not buttonB.value:# just button B pressed
-       y = top
-       draw.rectangle((0, 0, width, height), outline=0, fill=0)
-       timezone = timezone - 1
-       clock = datetime.now() + timedelta(hours=timezone)
-       draw.text((x,y), "Subtracted one hour", font=font, fill="#FFFFFF")
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        y = top
+        draw.text((x, y), "exercise", font=font, fill="#FFFFFF")
+       
     
     
     
