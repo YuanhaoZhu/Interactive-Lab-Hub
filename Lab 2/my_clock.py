@@ -107,7 +107,7 @@ while True:
             draw.text((x, y), pomotimer, font=font, fill="#FFFFFF")
             disp.image(image, rotation)
 
-            if buttonA.value and not buttonB.value:# just button B pressed
+            if buttonA.value and not buttonB.value:
                 break
         
         
@@ -115,22 +115,7 @@ while True:
 
         
 
-    if buttonA.value and not buttonB.value:# just button B pressed
-        draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        y = top
-        draw.text((x, y), "exercise", font=font, fill="#FFFFFF")
-        disp.image(image, rotation)
-        time.sleep(1)
-
-    
     if not buttonA.value and not buttonB.value:
-        # draw.rectangle((0, 0, width, height), outline=0, fill=0)
-
-        # y = top
-        # draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
-        # disp.image(image, rotation)
-        # time.sleep(1)
-
         n=1
         t=60
         while (t > 0) and (n < 16):
@@ -146,21 +131,10 @@ while True:
                 width = disp.width  # we swap height/width to rotate it to landscape!
                 height = disp.height
 
-
             image = Image.new("RGB", (width, height))
 
             # Get drawing object to draw on image.
             draw = ImageDraw.Draw(image)
-
-            # Draw a black filled box to clear the image.
-            
-            # draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-            # disp.image(image)
-
-
-            # part1="hourglass"
-            # part3=".png"
-            # filename=part1+n+part3
             pictureName = f"hourglass{n}.png"
             image = Image.open(pictureName)
             n=n+1
@@ -189,6 +163,8 @@ while True:
             disp.image(image)
             t=t-4
             time.sleep(4)
+
+        
 
 
 
