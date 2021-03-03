@@ -77,6 +77,11 @@ while True:
     disp.image(image, rotation)
     time.sleep(0.5)
 
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    y = top
+    draw.text((x, y), "snack", font=font, fill="#FFFFFF")
+    disp.image(image, rotation)
+
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
 
     if buttonB.value and not buttonA.value:# just button A pressed
@@ -85,6 +90,10 @@ while True:
         draw.text((x, y), "snack", font=font, fill="#FFFFFF")
         disp.image(image, rotation)
         time.sleep(1)
+
+
+
+
         # y += font.getsize("IP")[1]
         # draw.text((x, y), "WTTR", font=font, fill="#FFFF00")
         # y += font.getsize("WTTR")[1]
@@ -99,14 +108,14 @@ while True:
         disp.image(image, rotation)
         time.sleep(1)
 
+
     
     if not buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        image = Image.open("red.jpg")
-        # y = top
-        # draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
-        # disp.image(image, rotation)
-        # time.sleep(1)
+        y = top
+        draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
+        disp.image(image, rotation)
+        time.sleep(1)
 
 
 
