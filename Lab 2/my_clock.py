@@ -84,7 +84,7 @@ while True:
         y = top
         draw.text((x, y), "snack", font=font, fill="#FFFFFF")
         disp.image(image, rotation)
-        time.sleep(0.5)
+        time.sleep(1)
         # y += font.getsize("IP")[1]
         # draw.text((x, y), "WTTR", font=font, fill="#FFFF00")
         # y += font.getsize("WTTR")[1]
@@ -97,15 +97,18 @@ while True:
         y = top
         draw.text((x, y), "exercise", font=font, fill="#FFFFFF")
         disp.image(image, rotation)
-        time.sleep(0.5)
+        time.sleep(1)
 
     
     if not buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        y = top
-        draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
-        disp.image(image, rotation)
-        time.sleep(0.5)
+        image = Image.open("red.jpg")
+        # y = top
+        # draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
+        # disp.image(image, rotation)
+        # time.sleep(1)
+
+
 
 
 
