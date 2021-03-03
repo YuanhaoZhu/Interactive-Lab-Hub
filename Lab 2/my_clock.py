@@ -6,6 +6,12 @@ from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 from adafruit_rgb_display.rgb import color565
 import webcolors
+#refer to image.py
+import adafruit_rgb_display.ili9341 as ili9341
+import adafruit_rgb_display.hx8357 as hx8357  # pylint: disable=unused-import
+import adafruit_rgb_display.st7735 as st7735  # pylint: disable=unused-import
+import adafruit_rgb_display.ssd1351 as ssd1351  # pylint: disable=unused-import
+import adafruit_rgb_display.ssd1331 as ssd1331  # pylint: disable=unused-import
 
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
@@ -69,28 +75,44 @@ buttonB.switch_to_input()
 
 current_time = time.strftime("%H:%M") 
 
+
+
+
+
+
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     y = top
     draw.text((x, y), current_time, font=font, fill="#FFFFFF")
     disp.image(image, rotation)
-    time.sleep(0.5)
+    time.sleep(1)
 
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
 
     if buttonB.value and not buttonA.value:# just button A pressed
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         y = top
-        draw.text((x, y), "snack", font=font, fill="#FFFFFF")
-        disp.image(image, rotation)
+
+        t=1500
+
+        while t >0: #set a 25 mins timer
+            mins, secs = divmod(t, 60) 
+            pomotimer = '{:02d}:{:02d}'.format(mins, secs) 
+            #print(pomotimer, end="\r") 
+            time.sleep(1) 
+            t -= 1
+            draw.rectangle((0, 0, width, height), outline=0, fill=0)
+            draw.text((x, y), pomotimer, font=font, fill="#FFFFFF")
+            disp.image(image, rotation)
+
+            if buttonA.value and not buttonB.value:# just button B pressed
+                break
+        
+        
         time.sleep(1)
-        # y += font.getsize("IP")[1]
-        # draw.text((x, y), "WTTR", font=font, fill="#FFFF00")
-        # y += font.getsize("WTTR")[1]
-        # draw.text((x, y), "USD", font=font, fill="#0000FF")
-        # y += font.getsize("USD")[1]
-        # draw.text((x, y), "Temp", font=font, fill="#FF00FF")
+
+        
 
     if buttonA.value and not buttonB.value:# just button B pressed
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -102,7 +124,7 @@ while True:
     
     if not buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        
+
         y = top
         draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
         disp.image(image, rotation)
