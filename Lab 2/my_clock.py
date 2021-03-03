@@ -63,6 +63,7 @@ x = 0
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 70)
+smallfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 15)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -123,12 +124,46 @@ while True:
 
     
     if not buttonA.value and not buttonB.value:
-        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        # draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-        y = top
-        draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
-        disp.image(image, rotation)
-        time.sleep(1)
+        # y = top
+        # draw.text((x,y), "nonono", font=font, fill="#FFFFFF")
+        # disp.image(image, rotation)
+        # time.sleep(1)
+
+        n=1
+        t=60
+        while (t > 0) and (n < 16):
+            part1="hourglass"
+            part3=."png"
+            filename=part1+n+part3
+            image = Image.open(filename)
+            n=n+1
+            backlight = digitalio.DigitalInOut(board.D22)
+            backlight.switch_to_output()
+            backlight.value = True
+
+
+            # Scale the image to the smaller screen dimension
+            image_ratio = image.width / image.height
+            screen_ratio = width / height
+            if screen_ratio < image_ratio:
+                scaled_width = image.width * height // image.height
+                scaled_height = height
+            else:
+                scaled_width = width
+                scaled_height = image.height * width // image.width
+            image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+
+            # Crop and center the image
+            x = scaled_width // 2 - width // 2
+            y = scaled_height // 2 - height // 2
+            image = image.crop((x, y, x + width, y + height))
+
+            # Display image.
+            disp.image(image)
+            t=t-4
+            time.sleep(4)
 
 
 
