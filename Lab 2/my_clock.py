@@ -134,19 +134,44 @@ while True:
         n=1
         t=60
         while (t > 0) and (n < 16):
-            part1="hourglass"
-            part3=."png"
-            filename=part1+n+part3
-            image = Image.open(filename)
+
+            # Create blank image for drawing.
+            # Make sure to create image with mode 'RGB' for full color.
+
+            if disp.rotation % 180 == 90:
+                height = disp.width  # we swap height/width to rotate it to landscape!
+                width = disp.height
+                
+            else:
+                width = disp.width  # we swap height/width to rotate it to landscape!
+                height = disp.height
+
+
+            image = Image.new("RGB", (width, height))
+
+            # Get drawing object to draw on image.
+            draw = ImageDraw.Draw(image)
+
+            # Draw a black filled box to clear the image.
+            
+            # draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+            # disp.image(image)
+
+
+            # part1="hourglass"
+            # part3=".png"
+            # filename=part1+n+part3
+            pictureName = f"hourglass{n}.png"
+            image = Image.open(pictureName)
             n=n+1
             backlight = digitalio.DigitalInOut(board.D22)
             backlight.switch_to_output()
             backlight.value = True
 
-
             # Scale the image to the smaller screen dimension
             image_ratio = image.width / image.height
             screen_ratio = width / height
+            
             if screen_ratio < image_ratio:
                 scaled_width = image.width * height // image.height
                 scaled_height = height
