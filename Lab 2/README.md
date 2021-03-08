@@ -157,7 +157,7 @@ I draw the hourglass animation frame by frame, and let the screen to display it 
 
 Here is the effect of animation. 
 
-<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2%20part2%20animation.gif" height="200" />
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2%20part1%20animation.gif" height="200" />
 
 **A copy of your code should be in your Lab 2 Github repo.**
 
