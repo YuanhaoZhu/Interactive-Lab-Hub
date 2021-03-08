@@ -163,6 +163,8 @@ git push
 ```
 
 After that, git will ask you to login to your github account to upload.
+### My code for part1 is renamed as my_clock.py
+[see my copy of code in my_clock.py](my_clock.py)
 
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
