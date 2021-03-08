@@ -207,6 +207,6 @@ To make the clock more interactive, I added animation effect to the pomodoro too
 
 Here is the effect of animation. 
 
-<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2%20part2%20animation.gif" height="200" />
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2%20updated%20animation.gif" height="200" />
 
 
