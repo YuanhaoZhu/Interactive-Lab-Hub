@@ -170,6 +170,7 @@ After that, git will ask you to login to your github account to upload.
 ## Make a short video of your modified barebones PiClock
 
 **Take a video of your PiClock.**
+
 [video of my piclock (correspond to code in "my_clock.py")](https://youtu.be/gfHftGkF8F8)
 
 ## Part G. 
