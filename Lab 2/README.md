@@ -175,6 +175,7 @@ After that, git will ask you to login to your github account to upload.
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2_sketch.png" height="400" />
 
 ## Prep for Part 2
 
