@@ -152,6 +152,13 @@ Does time have to be linear?  How do you measure a year? [In daylights? In midni
 
 Can you make time interactive? You can look in `screen_test.py` for examples for how to use the buttons.
 
+I draw the hourglass animation frame by frame, and let the screen to display it during countdown.
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2%20part1.png" height="600" />
+
+Here is the effect of animation. 
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2%20part2%20animation.gif" height="200" />
+
 **A copy of your code should be in your Lab 2 Github repo.**
 
 You can push to your personal github repo by adding the files here, commiting and pushing.
@@ -172,6 +179,8 @@ After that, git will ask you to login to your github account to upload.
 **Take a video of your PiClock.**
 
 [video of my piclock (correspond to code in "my_clock.py")](https://youtu.be/gfHftGkF8F8)
+
+Note: The animation of hourglass shows color on the screen, but it was not captured by my phone's camera. It looks like all white in the video. The actual color looks exactly the same as the gif I showed above.
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
