@@ -65,6 +65,7 @@ x = 15
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 bigfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 70)
 smallfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 15)
+mediumfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 30)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -82,11 +83,11 @@ current_time = now.strftime("%H:%M")
 date = now.strftime("%m/%d/%Y")
 
 # Image Formatting
-def image_formatting(imagef, width, height):
-    imagef = imagef.convert('RGB')
-    imagef = imagef.resize((240, 135), Image.BICUBIC)
+def image_format(picture, width, height):
+    picture = picture.convert('RGB')
+    picture = picture.resize((240, 135), Image.BICUBIC)
 
-    return imagef
+    return picture
 
 
 while True:
@@ -109,8 +110,9 @@ while True:
 
     if buttonB.value and not buttonA.value:# just button A pressed
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        x = 15
-        y = height/2 - 40
+        
+        if buttonA.value and not buttonB.value:
+            break
 
         t=1500
         pic = 0
@@ -123,68 +125,28 @@ while True:
             if t % 60 == 0:
                 pic += 1
             t -= 1
-            # draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            # adjustImg(r"pomoPic/pomodoro1.png")
 
+            tomatoPath = f"pomoPic/pomodoro{pic}.png"
 
-            # image = Image.new("RGB", (width, height))
+            tomatoPic = Image.open(tomatoPath)
+            tomatoPic = image_format(tomatoPic, width, height)
 
-            # # Get drawing object to draw on image.
-            # draw = ImageDraw.Draw(image)
-            # # pictureName = f"hourglass{n}.png"
-            # image = Image.open(r"pomoPic/pomodoro1.png")
+            draw = ImageDraw.Draw(tomatoPic)
 
-            # image = adjustImg(image)
+            x = width - mediumfont.getsize(pomotimer)[0]-8
+            y = 8
+            draw.text((x, y), pomotimer, font=mediumfont, fill="#FFFFFF")
 
+            x = 8
+            y = 8
+            draw.text((x, y), "< back", font=smallfont, fill="#FFFFFF")
 
-            # if disp.rotation % 180 == 90:
-            #     height = disp.width  # we swap height/width to rotate it to landscape!
-            #     width = disp.height
-                
-            # else:
-            #     width = disp.width  # we swap height/width to rotate it to landscape!
-            #     height = disp.height
+            disp.image(tomatoPic, rotation)
 
-            # image = Image.new("RGB", (width, height))
-
-            # # Get drawing object to draw on image.
-            # draw = ImageDraw.Draw(image)
-            # # pictureName = f"hourglass{n}.png"
-            # image = Image.open(r"pomoPic/pomodoro1.png")
-            # # n=n+1
-            
-            # # Scale the image to the smaller screen dimension
-            # image_ratio = image.width / image.height
-            # screen_ratio = width / height
-            
-            # if screen_ratio < image_ratio:
-            #     scaled_width = image.width * height // image.height
-            #     scaled_height = height
-            # else:
-            #     scaled_width = width
-            #     scaled_height = image.height * width // image.width
-            # image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
-
-
-            image3 = Image.open(r"pomoPic/pomodoro1.png")
-            image3 = image_formatting(image3, width, height)
-
-            draw = ImageDraw.Draw(image3)
-
-
-
-
-
-
-            draw.text((x, y), pomotimer, font=bigfont, fill="#FFFFFF")
-            disp.image(image3, rotation)
-
-
-            if buttonA.value and not buttonB.value:
-                break
-        
-        
         time.sleep(1)
+
+        # if buttonA.value and not buttonB.value:
+        #     break
 
 
 
