@@ -226,7 +226,7 @@ while True:
             # y = scaled_height // 2 - height // 2
             # image = image.crop((x, y, x + width, y + height))
 
-            hourglassPath = f"hourglass{n}.png"
+            hourglassPath = f"hourglassPic/hourglass{n}.png"
             hourglassPic = Image.open(hourglassPath)
             hourglassPic = image_format(hourglassPic, width, height)
             draw = ImageDraw.Draw(hourglassPic)
