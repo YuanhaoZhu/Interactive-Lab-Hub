@@ -81,6 +81,12 @@ now = datetime.now() # current date and time
 current_time = now.strftime("%H:%M")
 date = now.strftime("%m/%d/%Y")
 
+# Image Formatting
+def image_formatting(imagef, width, height):
+    imagef = imagef.convert('RGB')
+    imagef = imagef.resize((240, 135), Image.BICUBIC)
+
+    return imagef
 
 
 while True:
@@ -131,40 +137,48 @@ while True:
             # image = adjustImg(image)
 
 
-            if disp.rotation % 180 == 90:
-                height = disp.width  # we swap height/width to rotate it to landscape!
-                width = disp.height
+            # if disp.rotation % 180 == 90:
+            #     height = disp.width  # we swap height/width to rotate it to landscape!
+            #     width = disp.height
                 
-            else:
-                width = disp.width  # we swap height/width to rotate it to landscape!
-                height = disp.height
+            # else:
+            #     width = disp.width  # we swap height/width to rotate it to landscape!
+            #     height = disp.height
 
-            image = Image.new("RGB", (width, height))
+            # image = Image.new("RGB", (width, height))
 
-            # Get drawing object to draw on image.
-            draw = ImageDraw.Draw(image)
-            # pictureName = f"hourglass{n}.png"
-            image = Image.open(r"pomoPic/pomodoro1.png")
-            # n=n+1
+            # # Get drawing object to draw on image.
+            # draw = ImageDraw.Draw(image)
+            # # pictureName = f"hourglass{n}.png"
+            # image = Image.open(r"pomoPic/pomodoro1.png")
+            # # n=n+1
             
-            # Scale the image to the smaller screen dimension
-            image_ratio = image.width / image.height
-            screen_ratio = width / height
+            # # Scale the image to the smaller screen dimension
+            # image_ratio = image.width / image.height
+            # screen_ratio = width / height
             
-            if screen_ratio < image_ratio:
-                scaled_width = image.width * height // image.height
-                scaled_height = height
-            else:
-                scaled_width = width
-                scaled_height = image.height * width // image.width
-            image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+            # if screen_ratio < image_ratio:
+            #     scaled_width = image.width * height // image.height
+            #     scaled_height = height
+            # else:
+            #     scaled_width = width
+            #     scaled_height = image.height * width // image.width
+            # image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+
+
+            image3 = Image.open(r"pomoPic/pomodoro1.png")
+            image3 = image_formatting(image3, width, height)
+
+            draw = ImageDraw.Draw(image3)
+
 
 
 
 
 
             draw.text((x, y), pomotimer, font=bigfont, fill="#FFFFFF")
-            disp.image(image, rotation)
+            disp.image(image3, rotation)
+
 
             if buttonA.value and not buttonB.value:
                 break
