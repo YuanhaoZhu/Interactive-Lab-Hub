@@ -66,6 +66,8 @@ x = 15
 bigfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 70)
 smallfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 15)
 mediumfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 30)
+font40 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 40)
+
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -109,14 +111,26 @@ while True:
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
 
     if buttonB.value and not buttonA.value:# just button A pressed
-        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        
+        endPic = Image.open(r"pomoPic/pomodoro1.png")
+        endPic = image_format(endPic, width, height)
+        draw = ImageDraw.Draw(endPic)
+        # disp.image(endPic, rotation)
+        x = 20
+        y = height/2 - 25
+        draw.text((x, y), "pomodoro", font=font40, fill="#FFFFFF")
+        disp.image(endPic, rotation)
+
+
+
+        # draw.rectangle((0, 0, width, height), outline=0, fill="#112536")
 
         
 
         t=1500
         pic = 25
 
-        while t >0: #set a 25 mins timer
+        while t > 0: #set a 25 mins timer
             mins, secs = divmod(t, 60) 
             pomotimer = '{:02d}:{:02d}'.format(mins, secs) 
             #print(pomotimer, end="\r") 
@@ -144,15 +158,24 @@ while True:
             y = 8
             draw.text((x, y), "+1min", font=smallfont, fill="#FFFFFF")
 
+            x = 8
+            y = height - 25
+            draw.text((x, y), "-1min", font=smallfont, fill="#FFFFFF")
+
             disp.image(tomatoPic, rotation)
 
             if buttonB.value and not buttonA.value:#press a
                 t += 60
-            if buttonA.value and not buttonB.value:#press a
+            if buttonA.value and not buttonB.value:#press b
                 t -= 60
+            if not buttonA.value and not buttonB.value:
+                break
+
+
             
 
-        time.sleep(1)
+        
+        # time.sleep(5)
 
         # if buttonA.value and not buttonB.value:
         #     break
@@ -162,6 +185,7 @@ while True:
         
 
     if not buttonA.value and not buttonB.value:
+    
         n=1
         t=60
         while (t > 0) and (n < 16):
@@ -169,43 +193,52 @@ while True:
             # Create blank image for drawing.
             # Make sure to create image with mode 'RGB' for full color.
 
-            if disp.rotation % 180 == 90:
-                height = disp.width  # we swap height/width to rotate it to landscape!
-                width = disp.height
+            # if disp.rotation % 180 == 90:
+            #     height = disp.width  # we swap height/width to rotate it to landscape!
+            #     width = disp.height
                 
-            else:
-                width = disp.width  # we swap height/width to rotate it to landscape!
-                height = disp.height
+            # else:
+            #     width = disp.width  # we swap height/width to rotate it to landscape!
+            #     height = disp.height
 
-            image = Image.new("RGB", (width, height))
+            # image = Image.new("RGB", (width, height))
 
-            # Get drawing object to draw on image.
-            draw = ImageDraw.Draw(image)
-            pictureName = f"hourglass{n}.png"
-            image = Image.open(pictureName)
+            # # Get drawing object to draw on image.
+            # draw = ImageDraw.Draw(image)
+            # pictureName = f"hourglass{n}.png"
+            # image = Image.open(pictureName)
+            # n=n+1
+            
+            # # Scale the image to the smaller screen dimension
+            # image_ratio = image.width / image.height
+            # screen_ratio = width / height
+            
+            # if screen_ratio < image_ratio:
+            #     scaled_width = image.width * height // image.height
+            #     scaled_height = height
+            # else:
+            #     scaled_width = width
+            #     scaled_height = image.height * width // image.width
+            # image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+
+            # # Crop and center the image
+            # x = scaled_width // 2 - width // 2
+            # y = scaled_height // 2 - height // 2
+            # image = image.crop((x, y, x + width, y + height))
+
+            hourglassPath = f"hourglass{n}.png"
+            hourglassPic = Image.open(hourglassPath)
+            hourglassPic = image_format(hourglassPic, width, height)
+            draw = ImageDraw.Draw(hourglassPic)
             n=n+1
-            
-            # Scale the image to the smaller screen dimension
-            image_ratio = image.width / image.height
-            screen_ratio = width / height
-            
-            if screen_ratio < image_ratio:
-                scaled_width = image.width * height // image.height
-                scaled_height = height
-            else:
-                scaled_width = width
-                scaled_height = image.height * width // image.width
-            image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
-
-            # Crop and center the image
-            x = scaled_width // 2 - width // 2
-            y = scaled_height // 2 - height // 2
-            image = image.crop((x, y, x + width, y + height))
 
             # Display image.
-            disp.image(image)
+            disp.image(hourglassPic, rotation)
             t=t-4
             time.sleep(4)
+
+
+
 
 
 
