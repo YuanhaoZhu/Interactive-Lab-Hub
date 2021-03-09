@@ -209,4 +209,5 @@ Here is the effect of animation.
 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2%20updated%20animation.gif" height="200" />
 
+[video of my piclock (correspond to code in "my_clock_v2.py")](https://youtu.be/gfHftGkF8F8)
 
