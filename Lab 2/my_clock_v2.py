@@ -110,20 +110,23 @@ while True:
 
     if buttonB.value and not buttonA.value:# just button A pressed
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
+
         
-        if buttonA.value and not buttonB.value:
-            break
 
         t=1500
-        pic = 0
+        pic = 25
 
         while t >0: #set a 25 mins timer
             mins, secs = divmod(t, 60) 
             pomotimer = '{:02d}:{:02d}'.format(mins, secs) 
             #print(pomotimer, end="\r") 
             time.sleep(1) 
-            if t % 60 == 0:
-                pic += 1
+            if t <=1500:
+                pic = 26 - t // 60 
+            else:
+                pic = 1
+            
+
             t -= 1
 
             tomatoPath = f"pomoPic/pomodoro{pic}.png"
@@ -139,9 +142,15 @@ while True:
 
             x = 8
             y = 8
-            draw.text((x, y), "< back", font=smallfont, fill="#FFFFFF")
+            draw.text((x, y), "+1min", font=smallfont, fill="#FFFFFF")
 
             disp.image(tomatoPic, rotation)
+
+            if buttonB.value and not buttonA.value:#press a
+                t += 60
+            if buttonA.value and not buttonB.value:#press a
+                t -= 60
+            
 
         time.sleep(1)
 
