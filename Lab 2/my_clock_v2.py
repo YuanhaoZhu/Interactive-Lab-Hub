@@ -2,6 +2,7 @@ import time
 import subprocess
 import digitalio
 import board
+from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 from adafruit_rgb_display.rgb import color565
@@ -62,7 +63,7 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 70)
+bigfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 70)
 smallfont = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 15)
 
 # Turn on the backlight
@@ -74,7 +75,11 @@ buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
-current_time = time.strftime("%H:%M") 
+#current_time = time.strftime("%H:%M") 
+
+now = datetime.now() # current date and time
+current_time = now.strftime("%H:%M")
+date = now.strftime("%m/%d/%Y")
 
 
 
@@ -84,8 +89,14 @@ current_time = time.strftime("%H:%M")
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    
     y = top
-    draw.text((x, y), current_time, font=font, fill="#FFFFFF")
+    draw.text((x, y), date, font=smallfont, fill="#FFFFFF")
+
+    y = height/2
+    draw.text((x, y), current_time, font=bigfont, fill="#FFFFFF")
+
+
     disp.image(image, rotation)
     time.sleep(1)
 
