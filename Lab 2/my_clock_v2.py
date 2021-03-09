@@ -58,7 +58,7 @@ padding = -2
 top = padding
 bottom = height - padding
 # Move left to right keeping track of the current x position for drawing shapes.
-x = 0
+x = 15
 
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
@@ -81,19 +81,24 @@ now = datetime.now() # current date and time
 current_time = now.strftime("%H:%M")
 date = now.strftime("%m/%d/%Y")
 
+# Image Formatting
+def image_formatting(imagef, width, height):
+    imagef = imagef.convert('RGB')
+    imagef = imagef.resize((240, 135), Image.BICUBIC)
 
-
-
+    return imagef
 
 
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     
-    y = top
+    x = 2
+    y = 2
     draw.text((x, y), date, font=smallfont, fill="#FFFFFF")
 
-    y = height/2
+    x = 15
+    y = height/2 - 40
     draw.text((x, y), current_time, font=bigfont, fill="#FFFFFF")
 
 
@@ -104,7 +109,8 @@ while True:
 
     if buttonB.value and not buttonA.value:# just button A pressed
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        y = top
+        x = 15
+        y = height/2 - 40
 
         t=1500
         pic = 0
@@ -117,15 +123,70 @@ while True:
             if t % 60 == 0:
                 pic += 1
             t -= 1
-            draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x, y), pomotimer, font=font, fill="#FFFFFF")
-            disp.image(image, rotation)
+            # draw.rectangle((0, 0, width, height), outline=0, fill=0)
+            # adjustImg(r"pomoPic/pomodoro1.png")
+
+
+            # image = Image.new("RGB", (width, height))
+
+            # # Get drawing object to draw on image.
+            # draw = ImageDraw.Draw(image)
+            # # pictureName = f"hourglass{n}.png"
+            # image = Image.open(r"pomoPic/pomodoro1.png")
+
+            # image = adjustImg(image)
+
+
+            # if disp.rotation % 180 == 90:
+            #     height = disp.width  # we swap height/width to rotate it to landscape!
+            #     width = disp.height
+                
+            # else:
+            #     width = disp.width  # we swap height/width to rotate it to landscape!
+            #     height = disp.height
+
+            # image = Image.new("RGB", (width, height))
+
+            # # Get drawing object to draw on image.
+            # draw = ImageDraw.Draw(image)
+            # # pictureName = f"hourglass{n}.png"
+            # image = Image.open(r"pomoPic/pomodoro1.png")
+            # # n=n+1
+            
+            # # Scale the image to the smaller screen dimension
+            # image_ratio = image.width / image.height
+            # screen_ratio = width / height
+            
+            # if screen_ratio < image_ratio:
+            #     scaled_width = image.width * height // image.height
+            #     scaled_height = height
+            # else:
+            #     scaled_width = width
+            #     scaled_height = image.height * width // image.width
+            # image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+
+
+            image3 = Image.open(r"pomoPic/pomodoro1.png")
+            image3 = image_formatting(image3, width, height)
+
+            draw = ImageDraw.Draw(image3)
+
+
+
+
+
+
+            draw.text((x, y), pomotimer, font=bigfont, fill="#FFFFFF")
+            disp.image(image3, rotation)
+
 
             if buttonA.value and not buttonB.value:
                 break
         
         
         time.sleep(1)
+
+
 
         
 
@@ -152,10 +213,7 @@ while True:
             pictureName = f"hourglass{n}.png"
             image = Image.open(pictureName)
             n=n+1
-            backlight = digitalio.DigitalInOut(board.D22)
-            backlight.switch_to_output()
-            backlight.value = True
-
+            
             # Scale the image to the smaller screen dimension
             image_ratio = image.width / image.height
             screen_ratio = width / height
@@ -177,6 +235,8 @@ while True:
             disp.image(image)
             t=t-4
             time.sleep(4)
+
+
 
         
 
