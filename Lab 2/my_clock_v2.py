@@ -131,13 +131,13 @@ while True:
             # image = adjustImg(image)
 
 
-            # if disp.rotation % 180 == 90:
-            #     height = disp.width  # we swap height/width to rotate it to landscape!
-            #     width = disp.height
+            if disp.rotation % 180 == 90:
+                height = disp.width  # we swap height/width to rotate it to landscape!
+                width = disp.height
                 
-            # else:
-            #     width = disp.width  # we swap height/width to rotate it to landscape!
-            #     height = disp.height
+            else:
+                width = disp.width  # we swap height/width to rotate it to landscape!
+                height = disp.height
 
             image = Image.new("RGB", (width, height))
 
