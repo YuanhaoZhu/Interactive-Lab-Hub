@@ -96,12 +96,15 @@ while True:
         y = top
 
         t=1500
+        pic = 0
 
         while t >0: #set a 25 mins timer
             mins, secs = divmod(t, 60) 
             pomotimer = '{:02d}:{:02d}'.format(mins, secs) 
             #print(pomotimer, end="\r") 
             time.sleep(1) 
+            if t % 60 == 0:
+                pic += 1
             t -= 1
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             draw.text((x, y), pomotimer, font=font, fill="#FFFFFF")
