@@ -190,52 +190,22 @@ while True:
         t=60
         while (t > 0) and (n < 16):
 
-            # Create blank image for drawing.
-            # Make sure to create image with mode 'RGB' for full color.
-
-            # if disp.rotation % 180 == 90:
-            #     height = disp.width  # we swap height/width to rotate it to landscape!
-            #     width = disp.height
-                
-            # else:
-            #     width = disp.width  # we swap height/width to rotate it to landscape!
-            #     height = disp.height
-
-            # image = Image.new("RGB", (width, height))
-
-            # # Get drawing object to draw on image.
-            # draw = ImageDraw.Draw(image)
-            # pictureName = f"hourglass{n}.png"
-            # image = Image.open(pictureName)
-            # n=n+1
-            
-            # # Scale the image to the smaller screen dimension
-            # image_ratio = image.width / image.height
-            # screen_ratio = width / height
-            
-            # if screen_ratio < image_ratio:
-            #     scaled_width = image.width * height // image.height
-            #     scaled_height = height
-            # else:
-            #     scaled_width = width
-            #     scaled_height = image.height * width // image.width
-            # image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
-
-            # # Crop and center the image
-            # x = scaled_width // 2 - width // 2
-            # y = scaled_height // 2 - height // 2
-            # image = image.crop((x, y, x + width, y + height))
-
             hourglassPath = f"hourglassPic/hourglass{n}.png"
             hourglassPic = Image.open(hourglassPath)
             hourglassPic = image_format(hourglassPic, width, height)
             draw = ImageDraw.Draw(hourglassPic)
             n=n+1
 
+            x = 8
+            y = height - 25
+            draw.text((x, y), "< quit", font=smallfont, fill="#FFFFFF")
             # Display image.
             disp.image(hourglassPic, rotation)
             t=t-4
             time.sleep(4)
+
+            if buttonA.value and not buttonB.value:
+                break
 
 
 
