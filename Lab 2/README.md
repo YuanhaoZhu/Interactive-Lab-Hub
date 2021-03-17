@@ -202,12 +202,15 @@ As always, make sure you document contributions and ideas from others explicitly
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
-To make the clock more interactive, I added animation effect to the pomodoro too. I draw the animation frame by frame. 
+**Notes:**
+Due to technical difficulties, I didn't successfully implement the button as I planned in the sketch above. Instead, I implement the UI and the pomodoro animation to make the the clock more user friendly and interactive.
+
+I draw the animation frame by frame:
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/Lab2%20part2.png" height="600" />
 
 Here is the effect of animation. 
 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%202/lab2%20updated%20animation.gif" height="200" />
 
-[video of my piclock (correspond to code in "my_clock_v2.py")](https://youtu.be/gfHftGkF8F8)
+[video of my piclock (correspond to code in "my_clock_v2.py")](https://youtu.be/Dw5zXZ4e6YY)
 
