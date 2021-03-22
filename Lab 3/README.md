@@ -81,6 +81,13 @@ The system should:
 
 *Document how the system works*
 
+I wanted to make this translator more graphical and user-friendly, so I made the language icon with Figma and Adobe Illustrator. I found translating from the dog, pokemon, and human (English but with a hidden meaning) would be fun to play with, so I made the corresponding icon for those three categories. 
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/dog.png" height="200">
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/human.png" height="200">
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/pikachu.png" height="200">
+
+
 *Include videos or screencaptures of both the system and the controller.*
 
 ## Test the system
