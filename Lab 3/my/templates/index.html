@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
     <link rel="stylesheet" href="static/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"></script>
@@ -18,26 +18,33 @@
     <div id='chart'></div>
     <br>
     <button id = 'play'>Eavesdrop</button>
-    <audio id='mic' src="http://{{ hostname }}.local:8080" >
-    </audio>
-        <br>
-            <br>
+    <audio id='mic' src="http://{{ hostname }}.local:8080" ></audio>
+    <br>
+    <br>
     <label> Speak
         <input type="text" id='wordsIn'>
         <button id='send'>send</button>
 
     </label>
 
-    <h2>Introduction</h2>
-    <br>
-    <button id='start'>Start</button>
-    <br> <p id='start_text'>Hi. I am your new trainer Joy. Nice to meet you. What is your name?</p>
-    <br>
-    <h2>Customization</h2>
-    <br>Please tell me your age. What is your height? What is your weight? OK. Let us get started.
-    <br>
-    <h2>Training</h2>
-    <br>First, let us do a bicep stretch. Stand close to a vertical bar or any edge like a wall. Keep your arm fully extended. And press your fingers against the wall. Turn your body away from the wall, until you feel a stretch in the biceps. Hold for twenty seconds.
+    <h2>Translated Text</h2>
+    <h3>Dog</h3>
+    <ul>
+        <li>I need walk</li>
+        <li>Hello, my friend</li>
+        <li>Play with me</li>
+    </ul> 
+    <h3>Human</h3>
+    <ul>
+        <li>That's boring</li>
+    </ul> 
+
+    <h3>Pokemon</h3>
+    <ul>
+        <li>Don't catch me</li>
+        <li>I will electricute you!</li>
+    </ul> 
+
 <script src="static/index.js"></script>
 </body>
 </html>
