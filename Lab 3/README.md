@@ -86,7 +86,7 @@ This the screenshot of my working process in Figma:
 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/lab3_illustration_process.png" height="300">
 
-Below is my final produt that ready to be fed into the raspberry-pi:
+Below is my final icons that's ready to be fed into the raspberry-pi:
 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/dog.png" height="200">
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/human.png" height="200">
