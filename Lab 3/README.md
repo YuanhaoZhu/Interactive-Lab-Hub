@@ -56,7 +56,7 @@ In the [demo directory](./demo), you will find an example wizard of oz project y
 
 ## Optional
 
-There is an included [dspeech](.dspeech) demo that uses [Mozilla DeepSpeech](https://github.com/mozilla/DeepSpeech) for speech to text. If you're interested in trying it out we suggest you create a seperarate virutalenv. 
+There is an included [dspeech](./dspeech) demo that uses [Mozilla DeepSpeech](https://github.com/mozilla/DeepSpeech) for speech to text. If you're interested in trying it out we suggest you create a seperarate virutalenv. 
 
 
 
@@ -68,9 +68,14 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 
 1. Sketch ideas for what you'll work on in lab on Wednesday.
 
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/Page2.png" height="1000">
+
 ## Share your idea sketches with Zoom Room mates and get feedback
 
 *what was the feedback? Who did it come from?*
+
+From Erin Gong: I ABSOLUTELY LOVE your sketches!! I think the idea of having the device as a language translator is super cool and wizarding it with a dog will be fun. I’m looking forward to seeing how you would test the system with a pokemon lol
+I also like the fact that the system displays an icon to indicate the mode it is currently on.
 
 ## Prototype your system
 
@@ -81,7 +86,21 @@ The system should:
 
 *Document how the system works*
 
+I wanted to make this translator more graphical and user-friendly, so I made the language icon with Figma and Adobe Illustrator. I found translating from the dog, pokemon, and human (English but with a hidden meaning) would be fun to play with, so I made the corresponding icon for those three categories. 
+This the screenshot of my working process in Figma:
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/lab3_illustration_process.png" height="300">
+
+Below is my final icons that's ready to be fed into the raspberry-pi:
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/dog.png" height="200">
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/human.png" height="200">
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/species_icon/pikachu.png" height="200">
+
+
 *Include videos or screencaptures of both the system and the controller.*
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/Page3.png">
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
