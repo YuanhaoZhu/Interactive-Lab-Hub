@@ -77,6 +77,8 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 From Erin Gong: I ABSOLUTELY LOVE your sketches!! I think the idea of having the device as a language translator is super cool and wizarding it with a dog will be fun. I’m looking forward to seeing how you would test the system with a pokemon lol
 I also like the fact that the system displays an icon to indicate the mode it is currently on.
 
+From Heidi He: wow what a sketch! Wizarding a device for talking to a dog is such a bold idea and I really love it. I am looking forward to the video with maybe the cutest user (a happy puppy or a fluffy pokemon) in it? I am curious where would you place the device in terms on the dog use case. Would it be in a box on the floor or would it be up high and unreachable for the dog?
+
 ## Prototype your system
 
 The system should:
