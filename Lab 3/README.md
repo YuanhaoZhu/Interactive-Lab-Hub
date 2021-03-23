@@ -112,18 +112,19 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-*your answer here*
+
+Since I used the server to wizarding the translation process, it works well that even the users speak input that's not listed. I can easily type in the result and let the webpage read out the translated results. However, the overall system is still not very user-friendly. There are too many buttons in the system, but the most useful one is just the joystick. It's just like the remote controller of the television, it's full of buttons, but we only use a few of them. The concept of choose, listen, and translate is too passive as a system, its performance really depends on if users can select the correct mode and let the device listen right before the subject speaks. A good system should automatically listen when there are foreign languages, automatically picks the correct mode, and then translate and read out the result. 
 
 ### What worked well about the controller and what didn't?
 
-*your answer here*
+I used the joystick to select a different mode of translation, so it works well as it can adapt many different options (you can select up, right, left, down, and anything in-between directions, so we can add even more modes/languages in). However the way I implement the joystick needs the users to press and hold the joystick in order to make the icon stay on the screen, this is not intuitive. Also, I didn't make any labels for the joystick, which caused the user to need to try many different directions to get their ideal mode. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-*your answer here*
+As I mentioned above, a more autonomous version of the cross-species translator should not rely on any buttons that users click (the only possibly needed button is for turn on/off the device). The translator should automatically detect language type/ subject species, and automatically listen to the possible speech and translate.    Just like in many sci-fi movies, this device should let the users forget about the existence of the device, but only enjoy the language that's being translated. 
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-*your answer here*
+I would need an audio sensor that would turn on the microphone when there is someone/animal speaking.  An additional camera can help the system recognize the species and aid the mode selection. A proximity sensor would help to turn on the mic when there is human or animals approaching.
 
