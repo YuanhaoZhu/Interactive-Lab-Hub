@@ -104,6 +104,8 @@ Below is my final icons that's ready to be fed into the raspberry-pi:
 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/Page3.png">
 
+Link to video: https://youtu.be/X5T9CmNxVo8
+
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
