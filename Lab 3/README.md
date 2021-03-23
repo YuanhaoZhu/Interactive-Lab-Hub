@@ -104,6 +104,11 @@ Below is my final icons that's ready to be fed into the raspberry-pi:
 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/Page3.png">
 
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/IMG_2520.jpg">
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%203/screencapture-ixe00-local-5000-2021-03-23-03_18_17.png" >
+
+
 Link to video: https://youtu.be/X5T9CmNxVo8
 
 ## Test the system
