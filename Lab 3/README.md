@@ -74,6 +74,9 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 
 *what was the feedback? Who did it come from?*
 
+From Erin Gong: I ABSOLUTELY LOVE your sketches!! I think the idea of having the device as a language translator is super cool and wizarding it with a dog will be fun. I’m looking forward to seeing how you would test the system with a pokemon lol
+I also like the fact that the system displays an icon to indicate the mode it is currently on.
+
 ## Prototype your system
 
 The system should:
