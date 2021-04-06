@@ -132,9 +132,15 @@ Make a paper display for your project that communicates the state of the Pi and 
  
 **a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
 
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/cardboard.png"/>
+
 **b. Make a video of your paper display in action.**
 
+https://youtu.be/8pp_rQOR3c8
+
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+I tried to make this clock as compact as possible, also the size of it is similar to a real analog clock. The idea of using a stick to make an appointment/schedule an event, is to let the stick be part of the visual cues. Users can see the sticks in a far distance and know they have upcoming events quickly. 
 
 ### Part D
 ### Materiality
@@ -144,8 +150,32 @@ Make a paper display for your project that communicates the state of the Pi and 
 Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?
 
 **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
+
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/design.png"/>
+
 **b. explain the selection.**
+
+The main components used are:
+
+Capacitive sensor: 
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/Group%2032.png" width="500"/>
+
+I chose it because it can be used to detect if there are any sticks inserted into the clock. However, the tradeoff of this capacitive sensor is that it detects the first contact of the stick, when your hand leaves the stick, the sensor cannot tell if the stick is still there (because only my hand carries the charge, the stick itself cannot trigger the sensor).
+
+OLED screen:
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/Group%2077.png" width="500"/>
+
+I used it to display the current time. I didn't add complex interaction to it.
+
+Adafruit Mini PiTFT: 
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/Group%20116.png" width="500"/>
+
+I used it to display the reservation that users made. I choose this one to display the reservation/event because it's a color display, and it has a higher resolution than the OLED screen, so I could add graphic icons later on to give better usability.
+
+
 
 ### Part 2.
 
