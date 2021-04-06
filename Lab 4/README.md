@@ -86,6 +86,10 @@ Banana 6 touched!
 
 *\*Some students have noted that their banana's look noticeably different from the ones presented in this demo. We firmly reject the accusation that these are not in fact banana's but Twizzlers™. Due to the challenges of remote teaching we cannot debug banana's at this time. We suggest you bring these issues up with the university or your local produce representative*
 
+My Human Banana Interaction:
+![461617603637_ pic](https://user-images.githubusercontent.com/46579769/113642301-83093900-964d-11eb-8890-0998237a99fe.jpg)
+
+
 ### Part B
 ### OLED screen
 
