@@ -134,8 +134,10 @@ Make a paper display for your project that communicates the state of the Pi and 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/cardboard.png"/>
 
 **b. Make a video of your paper display in action.**
+https://youtu.be/8pp_rQOR3c8
 
 **c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+I tried to make this clock as compact as possible, also the size of it is similar to a real analog clock. The idea of using a stick to make an appointment/schedule an event, is to let the stick be part of the visual cues. Users can see the sticks in a far distance and know they have upcoming events quickly. 
 
 ### Part D
 ### Materiality
