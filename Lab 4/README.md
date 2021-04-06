@@ -149,6 +149,12 @@ Design a system with the Pi and anything from your kit with a focus on form, and
 **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/design.png"/>
 **b. explain the selection.**
+The main components used are:
+Capacitive sensor: 
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/Group%2032.png" width="500"/>
+I chose it because it can be used to detect if there are any sticks inserted into the clock. However, the tradeoff of this capacitive sensor is that it detects the first contact of the stick, when your hand leaves the stick, the sensor cannot tell if the stick is still there (because only my hand carries the charge, the stick itself cannot trigger the sensor).
+
+
 
 ### Part 2.
 
