@@ -42,8 +42,8 @@ while True:
     draw.text((0, 0), text, font=font, fill=255)
     text = time.strftime("%e %b %Y")
     draw.text((0, 14), text, font=font, fill=255)
-    text = time.strftime("%X")
-    draw.text((0, 36), text, font=font2, fill=255)
+    text = "Make an appointment by inserting the stick"
+    draw.text((0, 28), text, font=font, fill=255)
     oled.image(image)
     oled.show()
 
