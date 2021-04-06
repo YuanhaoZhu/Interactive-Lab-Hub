@@ -175,6 +175,31 @@ Adafruit Mini PiTFT:
 
 I used it to display the reservation that users made. I choose this one to display the reservation/event because it's a color display, and it has a higher resolution than the OLED screen, so I could add graphic icons later on to give better usability.
 
+Bluetooth Speaker:
+
+```
+//first time setup bluetooth
+pi@ixe00:~ $ sudo apt-get install pulseaudio pulseaudio-module-bluetooth
+pi@ixe00:~ $ sudo apt-get install pi-bluetooth
+pi@ixe00:~ $ sudo reboot
+pi@ixe00:~ $ bluetoothctl
+[bluetooth]# agent on
+[bluetooth]# default-agent
+[bluetooth]# scan on
+[bluetooth]# pair XX:XX:XX:XX:XX:XX 
+[bluetooth]# trust XX:XX:XX:XX:XX:XX
+[bluetooth]# quit
+pi@ixe00:~ $
+```
+```
+//after setup, then each time you want to use bluetooth
+pi@ixe00:~ $ bluetoothctl
+[bluetooth]# devices
+Device XX:XX:XX:XX:XX:XX YOUR_DEVICE_NAME
+[bluetooth]# quit
+pi@ixe00:~ $
+```
+
 
 
 ### Part 2.
