@@ -155,7 +155,7 @@ Design a system with the Pi and anything from your kit with a focus on form, and
 
 **b. explain the selection.**
 
-The main components used are:
+The main components used are: (**below illustrations are made by Yuanhao Zhu**)
 
 Capacitive sensor: 
 
