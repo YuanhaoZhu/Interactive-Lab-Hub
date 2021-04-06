@@ -199,7 +199,7 @@ This is a prototyped interaction with the clock.
 https://youtu.be/8pp_rQOR3c8
 
 4. "Acts like" prototypes: videos/storyboards/other means of showing how a person would interact with the device
-https://youtu.be/8pp_rQOR3c8
+https://youtu.be/h6fObz8zHGA
 
 5. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
 
