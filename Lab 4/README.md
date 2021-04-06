@@ -86,8 +86,6 @@ Banana 6 touched!
 
 *\*Some students have noted that their banana's look noticeably different from the ones presented in this demo. We firmly reject the accusation that these are not in fact banana's but Twizzlers™. Due to the challenges of remote teaching we cannot debug banana's at this time. We suggest you bring these issues up with the university or your local produce representative*
 
-My Human Banana Interaction:
-![461617603637_ pic](https://user-images.githubusercontent.com/46579769/113642301-83093900-964d-11eb-8890-0998237a99fe.jpg)
 
 
 ### Part B
@@ -146,7 +144,7 @@ Make a paper display for your project that communicates the state of the Pi and 
 Design a system with the Pi and anything from your kit with a focus on form, and materiality. The "stuff" that enclose the system should be informed by the desired interaction. What would a computer made of rocks be like? How would an ipod made of grass behave? Would a roomba made of gold clean your floor any differently?
 
 **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
-
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/design.png"/>
 **b. explain the selection.**
 
 ### Part 2.
@@ -156,9 +154,10 @@ Following exploration and reflection from Part 1, complete the "looks like," "wo
 Reiterating:
 ### Deliverables for this lab are: 
 1. Sketches/photos of device designs
-1. "Looks like" prototypes: show us what how the device should look, feel, sit, weigh, etc.
-3. "Works like" prototypes: show us what the device can do
-4. "Acts like" prototypes: videos/storyboards/other means of showing how a person would interact with the device
-5. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%204/process.png"  width="600"/>
+3. "Looks like" prototypes: show us what how the device should look, feel, sit, weigh, etc.
+4. "Works like" prototypes: show us what the device can do
+5. "Acts like" prototypes: videos/storyboards/other means of showing how a person would interact with the device
+6. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
 
 
