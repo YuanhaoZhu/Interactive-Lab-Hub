@@ -230,7 +230,7 @@ Picture of clock during interaction:
 
 [Video of interaction with the device](https://youtu.be/h6fObz8zHGA)
 
-[I updated the cardboard case]https://youtu.be/h6fObz8zHGA
+[I updated the cardboard case](https://youtu.be/h6fObz8zHGA)
 
 5. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
 
