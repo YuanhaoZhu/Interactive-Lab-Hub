@@ -1,0 +1,6 @@
+0 husky
+1 empty_background
+2 keys
+3 laundry_card
+4 airpods
+5 empty_table

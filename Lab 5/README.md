@@ -152,6 +152,7 @@ Try out the tutorial:
 pi@ixe00:~ $ python -m venv ~/tf_venv --system-site-packages
 pi@ixe00:~ $ source ~/tf_venv/bin/activate
 (tf_venv) pi@ixe00:~ $ wget https://github.com/bitsy-ai/tensorflow-arm-bin/releases/download/v2.4.0/tensorflow-2.4.0-cp37-none-linux_armv7l.whl
+
 ```
 ### Part C
 ### Test the interaction prototype
