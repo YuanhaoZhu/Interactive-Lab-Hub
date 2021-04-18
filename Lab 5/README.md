@@ -154,6 +154,11 @@ pi@ixe00:~ $ source ~/tf_venv/bin/activate
 (tf_venv) pi@ixe00:~ $ wget https://github.com/bitsy-ai/tensorflow-arm-bin/releases/download/v2.4.0/tensorflow-2.4.0-cp37-none-linux_armv7l.whl
 
 ```
+After setup, whenever I want to enter the virtual environment that I created above, just type:
+```shell
+pi@ixe00:~ $ source ~/tf_venv/bin/activate
+(tf_venv) pi@ixe00:~ $ 
+```
 ### Part C
 ### Test the interaction prototype
 
