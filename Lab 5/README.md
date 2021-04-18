@@ -121,6 +121,26 @@ This can be as simple as the boat detector earlier.
 Try out different interactions outputs and inputs.
 **Describe and detail the interaction, as well as your experimentation.**
 
+1. Train TeachableMachines, and export models.
+
+2. Install Tensorflow to use with TeachableMachines models on the pi
+Reference [Tensorflow on The Pi for Teachable Machines](https://github.com/FAR-Lab/TensorflowonThePi)
+```shell
+pi@ixe00:~ $ python -m venv ~/tf_venv --system-site-packages
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt-get install python3-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: ['/home/pi/tf_venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']
+
+pi@ixe00:~ $ sudo apt-get install python3-venv
+```
+
 ### Part C
 ### Test the interaction prototype
 
