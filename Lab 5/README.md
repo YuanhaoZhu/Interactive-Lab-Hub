@@ -123,7 +123,9 @@ Try out different interactions outputs and inputs.
 
 1. Train TeachableMachines, and export models.
 
-2. Install Tensorflow to use with TeachableMachines models on the pi following the guide above [Tensorflow on The Pi for Teachable Machines](https://github.com/FAR-Lab/TensorflowonThePi)
+2. Install Tensorflow to use with TeachableMachines models on the pi following the guide mentioned above [Tensorflow on The Pi for Teachable Machines](https://github.com/FAR-Lab/TensorflowonThePi)
+
+Since my pi does not have python3-venv package, so I need to install it before following the tutorial.
 ```shell
 pi@ixe00:~ $ python -m venv ~/tf_venv --system-site-packages
 The virtual environment was not created successfully because ensurepip is not
