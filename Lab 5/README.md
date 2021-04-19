@@ -135,7 +135,8 @@ Try out different interactions outputs and inputs.
 1. Train TeachableMachines, and export models.
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/Train1.png" height="400">
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/Train2.png" height="400">
-[![Video of my trained teachable model working on pi](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/model_video_screenshot1.png)](https://youtu.be/G0lcI8VYL74=36s "Video of my trained teachable model working on pi")
+
+[![Video of trying out Teachable Machine](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/trainable_machine_video_cover.png)](https://youtu.be/jgfYqj3IG5U "Video of trying out Teachable Machine")
 
 2. Install Tensorflow to use with TeachableMachines models on the pi following the guide mentioned above [Tensorflow on The Pi for Teachable Machines](https://github.com/FAR-Lab/TensorflowonThePi)
 
@@ -174,7 +175,7 @@ pi@ixe00:~ $ source ~/tf_venv/bin/activate
 (tf_venv) pi@ixe00:~ $ 
 ```
 Here is the video of my trained model working on pi:
-[![Video of my trained teachable model working on pi](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/model_video_screenshot1.png)](https://youtu.be/G0lcI8VYL74=36s "Video of my trained teachable model working on pi")
+[![Video of my trained teachable model working on pi](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/model_video_screenshot1.png)](https://youtu.be/G0lcI8VYL74 "Video of my trained teachable model working on pi")
 
 ### Part C
 ### Test the interaction prototype
