@@ -138,12 +138,12 @@ Here I choosed the image project because the exported model is compatible with p
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/Train2.png" height="400">
 
 The initial attempt has 6 classes.
-- husky: I use Webcam to shoot the husky from many different angles, and no parts of me shown up on the images. Which leads to high accuracy when recognizing husky
-- empty_background: I used the Webcam to film it during the day time, and the my closet door is closed. This caused some problems when I tested the machine at night, and I opened the closet door, which introduced too much noice and lower the accuracy.
-- keys: I initially only used the photo of the keys, the background is my black table top. The machine cannot recognize the keys when I hold it on my hand. 
-- laundry_card: I shoot the image of the front and back of the laundry card with the background of my black table top. The model has low accuracy on this class, and most of the time, it’s been recognized as AirPods.
-- airpods: I shoot the image of the AirPods case and the AirPods with different angles, with the background of my black table top.
-- empty_table: In order to get rid of the noise from the black table top that I used as background for training photo of keys, laundry_card and airpods, I took 3 pictures of the black table top.
+- **husky**: I use Webcam to shoot the husky from many different angles, and no parts of me shown up on the images. Which leads to high accuracy when recognizing husky
+- **empty_background**: I used the Webcam to film it during the day time, and the my closet door is closed. This caused some problems when I tested the machine at night, and I opened the closet door, which introduced too much noice and lower the accuracy.
+- **keys**: I initially only used the photo of the keys, the background is my black table top. The machine cannot recognize the keys when I hold it on my hand. 
+- **laundry_card**: I shoot the image of the front and back of the laundry card with the background of my black table top. The model has low accuracy on this class, and most of the time, it’s been recognized as AirPods.
+- **airpods**: I shoot the image of the AirPods case and the AirPods with different angles, with the background of my black table top.
+- **empty_table**: In order to get rid of the noise from the black table top that I used as background for training photo of keys, laundry_card and airpods, I took 3 pictures of the black table top.
 
 Below is a video of me trying out the Teachable Machine with different objects. 
 
