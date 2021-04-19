@@ -83,6 +83,16 @@ pi@ixe00:~/openCV-examples $ tree -l
     ├── HowToUse.md
     └── ssd_mobilenet_v2_coco_2018_03_29.pbtxt
 ```
+In order to make the webCam work, I downloaded VNC and operate everyting on VNC.
+
+I tried face-detection with my friend's face:
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/face_detetction2.png" height="400">
+
+I tried object-detection with my keys:
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/object_detetction1.png" height="400">
+
+and a toilet paper roll:
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/object_detetction2.png" height="400">
 #### Filtering, FFTs, and Time Series data. (beta, optional)
 Additional filtering and analysis can be done on the sensors that were provided in the kit. For example, running a Fast Fourier Transform over the IMU data stream could create a simple activity classifier between walking, running, and standing.
 
