@@ -132,11 +132,12 @@ Try out different interactions outputs and inputs.
 **Describe and detail the interaction, as well as your experimentation.**
 
 **Below is mt process and experimentation**
-1. Train TeachableMachines, and export models.
+1. Train [TeachableMachines](https://teachablemachine.withgoogle.com/train), and export models.
+Here I choosed the image project because the exported model is compatible with python. 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/Train1.png" height="400">
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/Train2.png" height="400">
-
-[![Video of trying out Teachable Machine](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/trainable_machine_video_cover.png)](https://youtu.be/jgfYqj3IG5U "Video of trying out Teachable Machine")
+Below is a video of me trying out the Teachable Machine with different objects. 
+[![Video of trying out Teachable Machine](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/teachable_machine_video_cover.png)](https://youtu.be/jgfYqj3IG5U "Video of trying out Teachable Machine")
 
 2. Install Tensorflow to use with TeachableMachines models on the pi following the guide mentioned above [Tensorflow on The Pi for Teachable Machines](https://github.com/FAR-Lab/TensorflowonThePi)
 
