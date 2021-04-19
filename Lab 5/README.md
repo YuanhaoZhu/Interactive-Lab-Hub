@@ -131,7 +131,7 @@ This can be as simple as the boat detector earlier.
 Try out different interactions outputs and inputs.
 **Describe and detail the interaction, as well as your experimentation.**
 
-**Below is mt process and experimentation**
+**Below is my process and experimentation**
 1. Train [TeachableMachines](https://teachablemachine.withgoogle.com/train), and export models.
 Here I choosed the image project because the exported model is compatible with python. 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/Train1.png" height="400">
