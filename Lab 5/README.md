@@ -169,6 +169,9 @@ After setup, whenever I want to enter the virtual environment that I created abo
 pi@ixe00:~ $ source ~/tf_venv/bin/activate
 (tf_venv) pi@ixe00:~ $ 
 ```
+Here is the video of my trained model working on pi:
+[![Video of my trained teachable model working on pi](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/model_video_screenshot.png)](https://youtu.be/G0lcI8VYL74=36s "Video of my trained teachable model working on pi")
+
 ### Part C
 ### Test the interaction prototype
 
