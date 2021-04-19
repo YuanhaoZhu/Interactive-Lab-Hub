@@ -141,6 +141,22 @@ Below is a video of me trying out the Teachable Machine with different objects.
 
 [![Video of trying out Teachable Machine](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/teachable_machine_video_cover.png)](https://youtu.be/jgfYqj3IG5U "Video of trying out Teachable Machine")
 
+From the preview, the model often can correctly identfy the object that I trained it on. So I exported the model. 
+I my selection for export is below:
+
+> TensorFlow
+
+> Model conversion type: Keras
+
+Click "Download model", and move model to desired directory.
+
+In the same directory for your model, create a .py file. Cut and paste the code given by the *Teachable Machine* into this .py file. 
+
+Modify the .py file following [here](https://github.com/FAR-Lab/TensorflowonThePi/blob/master/TeachableMachinesExample/runModelWithCamera.py) 
+to make model work on pi.
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/Train2.png" height="400">
+
 2. Install Tensorflow to use with TeachableMachines models on the pi following the guide mentioned above [Tensorflow on The Pi for Teachable Machines](https://github.com/FAR-Lab/TensorflowonThePi)
 
 Since my pi does not have python3-venv package, so I need to install it before following the tutorial.
