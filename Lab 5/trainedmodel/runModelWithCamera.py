@@ -1,8 +1,44 @@
 import tensorflow.keras
-from PIL import Image, ImageOps
 import numpy as np
 import cv2
 import sys
+import time
+import board
+import digitalio
+from PIL import Image, ImageDraw, ImageFont, ImageOps
+import adafruit_ssd1306
+
+# Setting some variables for our reset pin etc.
+RESET_PIN = digitalio.DigitalInOut(board.D4)
+
+i2c = board.I2C()
+oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
+
+# Clear display.
+oled.fill(0)
+oled.show()
+
+# Create blank image for drawing.
+imageOLED = Image.new("1", (oled.width, oled.height))
+drawOLED = ImageDraw.Draw(imageOLED)
+
+# Load a font in 2 different sizes.
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16)
+
+# while True:
+#     # write the current time to the display after each scroll
+#     draw.rectangle((0, 0, oled.width, oled.height * 2), outline=0, fill=0)
+#     # text = time.strftime("%A")
+#     text = time.strftime("%H:%M:%S")
+#     draw.text((0, 0), text, font=font, fill=255)
+#     text2 = time.strftime("%e %b %Y")
+#     draw.text((0, 14), text2, font=font, fill=255)
+
+#     oled.image(image)
+#     oled.show()
+
+#     time.sleep(1)
+
 
 
 # Disable scientific notation for clarity
@@ -42,6 +78,16 @@ for line in f.readlines():
 
 
 while(True):
+    # drawOLED.rectangle((0, 0, oled.width, oled.height * 2), outline=0, fill=0)
+    # text1 = "Do you wear"
+    # drawOLED.text((0,0), text1, font = font, fill = 255)
+    # text2 = "a mask?"
+    # drawOLED.text((0,14), text2, font = font, fill = 255 )
+    # oled.image(imageOLED)
+    # oled.show()
+    # time.sleep(3)
+
+
     if webCam:
         ret, img = cap.read()
 
@@ -62,6 +108,82 @@ while(True):
     # run the inference
     prediction = model.predict(data)
     print("I think its a:",labels[np.argmax(prediction)])
+    prediction_result = labels[np.argmax(prediction)]
+
+
+    if prediction_result == "Me":
+        drawOLED.rectangle((0, 0, oled.width, oled.height * 2), outline=0, fill=0)
+        text1 = "Do you take"
+        drawOLED.text((0,0), text1, font = font, fill = 255)
+        text2 = "husky with you?"
+        drawOLED.text((0,14), text2, font = font, fill = 255 )
+        oled.image(imageOLED)
+        oled.show()
+        #time.sleep(3)
+        
+
+    if prediction_result == "husky":
+        drawOLED.rectangle((0, 0, oled.width, oled.height * 2), outline=0, fill=0)
+        text1 = "Do you have"
+        drawOLED.text((0, 0), text1, font=font, fill=255)
+        text2 = "airpods with you?"
+        drawOLED.text((0, 14), text2, font=font, fill=255)
+        oled.image(imageOLED)
+        oled.show()
+
+    if prediction_result == "airpods":
+        drawOLED.rectangle((0, 0, oled.width, oled.height * 2), outline=0, fill=0)
+        text1 = "Good! You can"
+        drawOLED.text((0, 0), text1, font=font, fill=255)
+        text2 = "go outside!"
+        drawOLED.text((0, 14), text2, font=font, fill=255)
+        oled.image(imageOLED)
+        oled.show()
+        #Stime.sleep(3)
+                
+
+        
+
+
+        # if prediction_result == "husky":
+        #     drawOLED.rectangle((0, 0, oled.width, oled.height * 2), outline=0, fill=0)
+        #     text1 = "Do you have"
+        #     drawOLED.text((0, 0), text1, font=font, fill=255)
+        #     text2 = "keys with you?"
+        #     drawOLED.text((0, 14), text2, font=font, fill=255)
+        #     oled.image(imageOLED)
+        #     oled.show()
+        #     #time.sleep(3)
+        #     prediction = model.predict(data)
+        #     print("I think its a:",labels[np.argmax(prediction)])
+        #     prediction_result = labels[np.argmax(prediction)]
+
+
+        #     if prediction_result == "keys":
+        #         drawOLED.rectangle((0, 0, oled.width, oled.height * 2), outline=0, fill=0)
+        #         text1 = "Do you take"
+        #         drawOLED.text((0, 0), text1, font=font, fill=255)
+        #         text2 = "airpods with you?"
+        #         drawOLED.text((0, 14), text2, font=font, fill=255)
+        #         oled.image(imageOLED)
+        #         oled.show()
+        #         #time.sleep(3)
+
+        #         if prediction_result == "airpods":
+        #             drawOLED.rectangle((0, 0, oled.width, oled.height * 2), outline=0, fill=0)
+        #             text1 = "Bravo! You can"
+        #             drawOLED.text((0, 0), text1, font=font, fill=255)
+        #             text2 = "go outside!"
+        #             drawOLED.text((0, 14), text2, font=font, fill=255)
+        #             oled.image(imageOLED)
+        #             oled.show()
+        #             #Stime.sleep(3)
+
+
+
+
+
+
 
     if webCam:
         if sys.argv[-1] == "noWindow":
