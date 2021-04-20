@@ -203,8 +203,7 @@ After setup, whenever I want to enter the virtual environment that I created abo
 pi@ixe00:~ $ source ~/tf_venv/bin/activate
 (tf_venv) pi@ixe00:~ $ 
 ```
-Here is the video of my trained model working on pi:
-[![Video of my trained teachable model working on pi](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/model_video_screenshot1.png)](https://youtu.be/G0lcI8VYL74 "Video of my trained teachable model working on pi")
+
 
 ### Part C
 ### Test the interaction prototype
@@ -254,6 +253,8 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **Include a short video demonstrating the answers to these questions.**
+Here is the video of my trained model working on pi:
+[![Video of my trained teachable model working on pi](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/model_video_screenshot1.png)](https://youtu.be/G0lcI8VYL74 "Video of my trained teachable model working on pi")
 
 ### Part 2.
 
