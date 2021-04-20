@@ -232,6 +232,14 @@ For example:
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
 
+- I asked my friend to test this sytem. He's fully aware of the delay of the system at the first time he interact with it. There is a lot of misclassfication and some of them are very funny.
+
+> My friend squeezed his face and the model is very sure he is a airpod.
+> <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/mistaken_airpod.png" height="400">
+
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/husky_not_me.png" height="400">
+
 ### Part D
 ### Characterize your own Observant system
 
