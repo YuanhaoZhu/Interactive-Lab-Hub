@@ -213,16 +213,18 @@ Now flight test your interactive prototype and **note your observations**:
 For example:
 1. When does it what it is supposed to do?
 
-> The current interactive prototype is very accuarate in detecting husky, maybe due to color contrast with background, different angles or trainning pictures, or clear features. When the background is the same as the background that I used in training, the accuracy is also higher. 
+-  The current interactive prototype is very accuarate in detecting husky, maybe due to color contrast with background, different angles or trainning pictures, or clear features. When the background is the same as the background that I used in training, the accuracy is also higher. 
 
 2. When does it fail? 3. When it fails, why does it fail?
 
-> The current interactive prototype is getting fuzzy between AirPods and laundry cards. When I show the laundry card to the camera, it was very often detected as AirPods. In human eyes, they look so different, from color to shape. But the training model may see they both white rectangles and mistaken them. 
-> Also dim environment will impair the performance of the model. 
-> I used different background when I do the training and testing. When I shoot photos for training, my closet door is closed and in the daytime. When I test the model, my closet door is open and in the nighttime. The clothing in the closet introduce a lot of noise and reduced accuracy. 
+- The current interactive prototype is getting fuzzy between AirPods and laundry cards. When I show the laundry card to the camera, it was very often detected as AirPods. In human eyes, they look so different, from color to shape. But the training model may see they both white rectangles and mistaken them. 
+-  Also dim environment will impair the performance of the model. 
+-  I used different background when I do the training and testing. When I shoot photos for training, my closet door is closed and in the daytime. When I test the model, my closet door is open and in the nighttime. The clothing in the closet introduce a lot of noise and reduced accuracy. 
 
 4. Based on the behavior you have seen, what other scenarios could cause problems?
 
+- Moving object too fast. The interactive prototype is very slow with significant delay. The object need to stay static in front of camera at least for a few seconds.
+- Object is too far from the camera. I noticed this issue from both training and testing period. When you train the model the 
 
 
 **Think about someone using the system. Describe how you think this will work.**
