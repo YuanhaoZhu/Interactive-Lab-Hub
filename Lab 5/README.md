@@ -242,6 +242,6 @@ During the lecture, we mentioned questions to help characterize a material:
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **Include a short video demonstrating the finished result.**
-[![Video of my final result](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/model_video_screenshot3.png)](https://youtu.be/6yD_0l5AXYc "Video of my final result")
+[![Video of my final result](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/final_video_screenshot3.png)](https://youtu.be/6yD_0l5AXYc "Video of my final result")
 
 
