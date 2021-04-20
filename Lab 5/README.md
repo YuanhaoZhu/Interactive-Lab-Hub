@@ -236,8 +236,12 @@ For example:
 > My friend squeezed his face and the model is very sure he is a airpod.
 > <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/mistaken_airpod.png" height="400">
 
+- Usually "not detected" of anything does not hurt very bad to users, it only will take them longer in front of the camera. However, misclassify an object may cause huge problem. My system is designed to check if user take all the essential items with them before they go outside. If the system misclassify the wall as keys, the users may leave without the keys and will be locked outside. 
+- On the machine learning model itself, I could try differet pictures and classes to get optimal model. In addition to that, adding extra sensor to confirm the classification would increase the accuracy of the system. 
+- On my own models: I removed class of laundry card since it confused the model very much. I also add a class of me wearing masks and beanie (very close to my outfit when I go outside during COVID). I also tried different angles to shoot pictures for training, and with differentr background to make use the model capture the correct features. 
 
-<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/husky_not_me.png" height="400">
+> I found if husky and I appear at the same time, the model only recognize husky. I don't know why the model is so confident at husky. While I holding the airpods with my hear appearing in the frame, the model at least get me some percentages. 
+> <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%205/husky_not_me.png" height="400">
 
 ### Part D
 ### Characterize your own Observant system
