@@ -224,8 +224,7 @@ For example:
 4. Based on the behavior you have seen, what other scenarios could cause problems?
 
 - Moving object too fast. The interactive prototype is very slow with significant delay. The object need to stay static in front of camera at least for a few seconds.
-- Object is too far from the camera. I noticed this issue from both training and testing period. When you train the model the 
-
+- Object is too far from the camera. I noticed this issue from both training and testing period. Occupying the the entire training image with the class object would make model yield better performance during testing. In contrast, if you hold the object too far away from the camera, the features that the model can capture is lesser, and it capture the feature of the background instead. 
 
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
