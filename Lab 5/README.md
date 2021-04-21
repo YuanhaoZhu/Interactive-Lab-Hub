@@ -249,12 +249,19 @@ For example:
 Now that you have experimented with one or more of these sense-making systems **characterize their behavior**.
 During the lecture, we mentioned questions to help characterize a material:
 * What can you use X for?
+> We can use the sense-making systems to make a smart check-list to remind people if they take their keys, doorpass, phones or their furry friends before they walk out the doors. 
 * What is a good environment for X?
+> A bright and clear background is always prefered.
 * What is a bad environment for X?
+> Dim, colorful/patchy background may make the objection dection tasks harder.
 * When will X break?
+> The system will break when it classify something else as the target object (keys, doorpass, phone). 
 * When it breaks how will X break?
+> It misclassify the object and will let users go without having those items.
 * What are other properties/behaviors of X?
+> The device will ask users to show the items they're supposed to take in front of the camera. If they don't see they item, they will wait the user until they detect that class of object. 
 * How does X feel?
+> The system will relief the burden of think about "Did I forget something?". When you try to walk you dog but forget your dog, when you go outside but being locked outside the door, when you do laundry back without your laundry card, you would want this device.
 
 **Include a short video demonstrating the answers to these questions.**
 Here is the video of my trained model working on pi:
