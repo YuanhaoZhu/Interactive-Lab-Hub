@@ -90,8 +90,8 @@ def on_message(client, userdata, msg):
     text = msg.payload.decode('UTF-8')
 
     if text == on_text:
-        buttonGreen.LED_on()
-        buttonRed.LED_on()
+        buttonGreen.LED_on(100)
+        buttonRed.LED_on(100)
         # client.publish(this_topic, "Game over! Final score was " + str(score) + ". Restarting game.")
         # score = 0
         y = top
@@ -104,6 +104,8 @@ def on_message(client, userdata, msg):
     else:
         # client.publish(this_topic, "Game over! Final score was " + str(score) + ". Restarting game.")
         # score = 0
+        buttonGreen.LED_off()
+        buttonRed.LED_off()
         y = top
         screen_text = "Renzhi is not here."
         draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
