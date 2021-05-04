@@ -68,25 +68,13 @@ backlight.switch_to_output()
 backlight.value = True
 
 
-
-
-
-client = mqtt.Client(str(uuid.uuid1()))
-client.tls_set()
-client.username_pw_set('idd', 'device@theFarm')
-
-#connect to the broker
-client.connect(
-    'farlab.infosci.cornell.edu',
-    port=8883)
-
 i2c = board.I2C()
 apds = APDS9960(i2c)
 
 apds.enable_proximity = True
 
 send_topic = 'IDD/proximity'
-received_send_topic = 'IDD/respond'
+receive_topic = 'IDD/respond'
 
 available = False
 
@@ -138,8 +126,27 @@ def on_message(client, userdata, msg):
 
 
 
+
+# Every client needs a random ID
+client = mqtt.Client(str(uuid.uuid1()))
+# configure network encryption etc
+client.tls_set()
+# this is the username and pw we have setup for the class
+client.username_pw_set('idd', 'device@theFarm')
+
+# attach out callbacks to the client
+client.on_connect = on_connect
+client.on_message = on_message
+
+#connect to the broker
+client.connect('farlab.infosci.cornell.edu',port=8883)
+
+
+
+
 while True:
-	print(f'{apds.proximity}')
+	# print(f'{apds.proximity}')
+	client.loop()
 
 	if apds.proximity > 5 and not available:
 		client.publish(send_topic, "I'm available now, feel free to reach out.")
