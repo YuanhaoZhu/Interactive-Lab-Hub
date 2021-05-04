@@ -95,9 +95,11 @@ def on_message(client, userdata, msg):
         # client.publish(this_topic, "Game over! Final score was " + str(score) + ". Restarting game.")
         # score = 0
         y = top
-        screen_text = "Renzhi is available now!"
+        screen_text = "Renzhi is"
+        screen_text2= "available now!"
         draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-        draw.text((x, y), screen_text, font=font, fill="#FF0000")
+        draw.text((x, y), screen_text, font=font, fill="#88CA35")
+        draw.text((x, y+30), screen_text2, font=font, fill="#88CA35")
         disp.image(image, rotation)
         time.sleep(2)
 
@@ -107,16 +109,20 @@ def on_message(client, userdata, msg):
         buttonGreen.LED_off()
         buttonRed.LED_off()
         y = top
-        screen_text = "Renzhi is not here."
+        screen_text = "Renzhi is"
+        screen_text2= "not here."
         draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-        draw.text((x, y), screen_text, font=font, fill="#FF0000")
+        draw.text((x, y), screen_text, font=font, fill="#FF6666")
+        draw.text((x, y+30), screen_text2, font=font, fill="#FF6666")
         disp.image(image, rotation)
         time.sleep(2)
 
     y = top
-    screen_text = "Hello! "
+    screen_text = "Looking for"
+    screen_text2 = "Renzhi..."
     draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
     draw.text((x, y), screen_text, font=font, fill="#FFFFFF")
+    draw.text((x, y+30), screen_text2, font=font, fill="#FFFFFF")
     disp.image(image, rotation)
 
 # Every client needs a random ID
