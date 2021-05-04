@@ -89,20 +89,30 @@ def on_message(client, userdata, msg):
     print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
     text = msg.payload.decode('UTF-8')
 
-    if text == currMove:
-        score += 1
-    else:
-        client.publish(this_topic, "Game over! Final score was " + str(score) + ". Restarting game.")
-        score = 0
+    if text == on_text:
+        buttonGreen.LED_on()
+        buttonRed.LED_on()
+        # client.publish(this_topic, "Game over! Final score was " + str(score) + ". Restarting game.")
+        # score = 0
         y = top
-        screen_text = "GAME OVER!"
+        screen_text = "Renzhi is available now!"
+        draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+        draw.text((x, y), screen_text, font=font, fill="#FF0000")
+        disp.image(image, rotation)
+        time.sleep(2)
+
+    else:
+        # client.publish(this_topic, "Game over! Final score was " + str(score) + ". Restarting game.")
+        # score = 0
+        y = top
+        screen_text = "Renzhi is not here."
         draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
         draw.text((x, y), screen_text, font=font, fill="#FF0000")
         disp.image(image, rotation)
         time.sleep(2)
 
     y = top
-    screen_text = "Current score: " + str(score)
+    screen_text = "Hello! "
     draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
     draw.text((x, y), screen_text, font=font, fill="#FFFFFF")
     disp.image(image, rotation)
@@ -137,10 +147,10 @@ while True:
     client.loop()
 
     if buttonGreen.is_button_pressed():
-        client.publish(this_topic, "LEFT")
-        currMove = 'L'
+        client.publish(this_topic, "Yuanhao wants to chat with you")
+        status = 'YES'
     elif buttonRed.is_button_pressed():
-        client.publish(this_topic, "RIGHT")
-        currMove = 'R'
+        client.publish(this_topic, "Yuanhao is busy")
+        status = 'NO'
 
     time.sleep(0.5)
