@@ -67,9 +67,9 @@ backlight.switch_to_output()
 backlight.value = True
 
 # Topic for sending messages
-this_topic = "IDD/respond"
+send_topic = "IDD/respond"
 # Topic for reading messages
-other_topic = "IDD/proximity"
+receive_topic = "IDD/proximity"
 
 on_text = "I'm available now, feel free to reach out."
 away_text = "I'm away."
@@ -79,7 +79,7 @@ away_text = "I'm away."
 #we should add our subscribe functions here as well
 def on_connect(client, userdata, flags, rc):
     print(f"connected with result code {rc}")
-    client.subscribe(other_topic)
+    client.subscribe(receive_topic)
 
 # this is the callback that gets called each time a message is recived
 def on_message(client, userdata, msg):
@@ -92,8 +92,6 @@ def on_message(client, userdata, msg):
     if text == on_text:
         buttonGreen.LED_on(100)
         buttonRed.LED_on(100)
-        # client.publish(this_topic, "Game over! Final score was " + str(score) + ". Restarting game.")
-        # score = 0
         y = top
         screen_text = "Renzhi is"
         screen_text2= "available now!"
@@ -104,8 +102,6 @@ def on_message(client, userdata, msg):
         time.sleep(2)
 
     else:
-        # client.publish(this_topic, "Game over! Final score was " + str(score) + ". Restarting game.")
-        # score = 0
         buttonGreen.LED_off()
         buttonRed.LED_off()
         y = top
@@ -155,10 +151,10 @@ while True:
     client.loop()
 
     if buttonGreen.is_button_pressed():
-        client.publish(this_topic, "Yuanhao wants to chat with you")
+        client.publish(send_topic, "Yuanhao wants to chat with you")
         status = 'YES'
     elif buttonRed.is_button_pressed():
-        client.publish(this_topic, "Yuanhao is busy")
+        client.publish(send_topic, "Yuanhao is busy")
         status = 'NO'
 
     time.sleep(0.5)
