@@ -96,6 +96,8 @@ Illustration credit to Renzhi Hu
 
 **3. Build a working prototype of the system.** Do think about the user interface: if someone encountered these bananas, would they know how to interact with them? Should they know what to expect?
 
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%206/original_design.png">
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%206/updated_design.png">
 **4. Document the working prototype in use.** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
 [Prototyping Video](https://www.youtube.com/watch?v=KoVmd207eaE)
 
