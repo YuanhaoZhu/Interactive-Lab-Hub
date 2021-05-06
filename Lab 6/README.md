@@ -98,7 +98,9 @@ Illustration credit to Renzhi Hu
 
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%206/original_design.png">
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Lab%206/updated_design.png">
+
 **4. Document the working prototype in use.** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+
 [Prototyping Video](https://www.youtube.com/watch?v=KoVmd207eaE)
 
 **5. BONUS (Wendy didn't approve this so you should probably ignore it)** get the whole class to run your code and make your distributed system BIGGER.
