@@ -89,6 +89,8 @@ I partnered with [Renzhi Hu](https://github.com/renzhihu98/Interactive-Lab-Hub/t
 
 **1. Explain your design** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+During COVID time, people spend their most of time at home. In the meantime, people tend to respond to their messages slower, because, at home, the phone is not the most important communication tool. Some people even have difficulty finding their phones. With this automatic device, people will know if their friends are available or not and respond to them in one click. You will not be disturbed when you're lying on your bed, watching TV, even playing games, and enjoy your time at home. 
+
 **2. Diagram the architecture of the system.** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
 <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%206/process.jpg?raw=true">
