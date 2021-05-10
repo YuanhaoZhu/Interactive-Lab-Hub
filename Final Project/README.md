@@ -53,3 +53,14 @@ After installed the Chromium Web Browser and reboot the pi, the icon of the brow
 ![Chromium installed](https://user-images.githubusercontent.com/46579769/117605247-4ab1ba80-b125-11eb-9fde-cc08897c0676.png)
 
 
+[Using a USB Audio Device with the Raspberry Pi](https://www.raspberrypi-spy.co.uk/2019/06/using-a-usb-audio-device-with-the-raspberry-pi/)
+````
+pi@ixe00:~ $ lsusb
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 003: ID 04d8:0c02 Microchip Technology, Inc. 
+Bus 001 Device 004: ID 1908:2070 GEMBIRD 
+Bus 001 Device 002: ID 2109:3431 VIA Labs, Inc. Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+````
+
