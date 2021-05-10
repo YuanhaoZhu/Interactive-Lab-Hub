@@ -85,13 +85,7 @@ I found other usefull links to connect USB speaker to pi:[Using a USB Audio Devi
 
 After testing, my speaker is finally working! :ear:
 
-### Prepare web server
-Create virtual environment
-```
-pi@ixe00:~ $ virtualenv woz
-pi@ixe00:~ $ source woz/bin/activate
-(woz) pi@yourHostname:~ $ cd Interactive-Lab-Hub/Lab\ 3/demo
-(woz) pi@yourHostname:~/Interactive-Lab-Hub/Lab 3/demo $ 
-(woz) pi@yourHostname:~/Interactive-Lab-Hub/Lab 3/demo $ pip install -r requirements.txt
-(woz) pi@yourHostname:~/Interactive-Lab-Hub/Lab 3/demo $ python app.py
-```
+### Write into HDMI 
+I've searching some ways to let pi directly write into the HDMI connected screen. 
+Our TA @Ilan Mandel said I could use [pygame](https://www.pygame.org/news), which is well documented. 
+However,[I found this example that creates fullscreen window, without borders, always on top](https://stackoverflow.com/questions/47856817/tkinter-canvas-based-kiosk-like-program-for-raspberry-pi?answertab=active#tab-top). I think this one would be easier than pygame.
