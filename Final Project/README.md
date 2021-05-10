@@ -39,6 +39,9 @@ This version of the class is very different, but it may be useful to see these.
 
 # Documentation
 Material:
+- [HDMI 4 Pi: 5" Display w/Touch and Mini Driver - 800x480 HDMI](https://www.adafruit.com/product/2109)
+- [USB speaker](https://www.adafruit.com/product/3369)
+- [Stereo Enclosed Speaker Set - 3W 4 Ohm](https://www.adafruit.com/product/1669)- Not Used in the end
 
 ### Install web browser
 Reference: [Installing the Chromium Web Browser on a Raspberry Pi](https://pimylifeup.com/raspberry-pi-chromium-browser/)
