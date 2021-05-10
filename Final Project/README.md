@@ -40,7 +40,7 @@ This version of the class is very different, but it may be useful to see these.
 # Documentation
 Material:
 
-### Intall web browser
+### Install web browser
 Reference: [Installing the Chromium Web Browser on a Raspberry Pi](https://pimylifeup.com/raspberry-pi-chromium-browser/)
 ````
 pi@ixe00:~ $ sudo apt update
@@ -65,7 +65,7 @@ I think I need to change the audio output into [USB speaker](https://www.adafrui
 
 <img src="https://cdn-shop.adafruit.com/1200x900/3369-00.jpg" height=300>
 
-
+### Install speaker
 In order to make us hear again (being deaf from previous SPK plug in stero speaker), we need to [update the ALSA config](https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/updating-alsa-config).
 > All we have to do is tell Raspbian to look at "card #1" for the default audio. Card #0 is the built in audio, so this is fairly straightforward.
 
@@ -80,4 +80,15 @@ In order to make us hear again (being deaf from previous SPK plug in stero speak
 
 I found other usefull links to connect USB speaker to pi:[Using a USB Audio Device with the Raspberry Pi](https://www.raspberrypi-spy.co.uk/2019/06/using-a-usb-audio-device-with-the-raspberry-pi/). But I think above method is more straightforward and easy.
 
+After testing, my speaker is finally working! :ear:
 
+### Prepare web server
+
+```
+pi@ixe00:~ $ virtualenv woz
+pi@ixe00:~ $ source woz/bin/activate
+(woz) pi@yourHostname:~ $ cd Interactive-Lab-Hub/Lab\ 3/demo
+(woz) pi@yourHostname:~/Interactive-Lab-Hub/Lab 3/demo $ 
+(woz) pi@yourHostname:~/Interactive-Lab-Hub/Lab 3/demo $ pip install -r requirements.txt
+(woz) pi@yourHostname:~/Interactive-Lab-Hub/Lab 3/demo $ python app.py
+```
