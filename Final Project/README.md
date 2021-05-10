@@ -46,5 +46,10 @@ Reference: [Installing the Chromium Web Browser on a Raspberry Pi](https://pimyl
 pi@ixe00:~ $ sudo apt update
 pi@ixe00:~ $ sudo apt full-upgrade
 pi@ixe00:~ $ sudo apt install chromium-browser -y
+pi@ixe00:~ $ sudo reboot
 ````
+After installed the Chromium Web Browser and reboot the pi, the icon of the browser appeared on my VNC desktop of pi.
+
+![Chromium installed](https://user-images.githubusercontent.com/46579769/117605247-4ab1ba80-b125-11eb-9fde-cc08897c0676.png)
+
 
