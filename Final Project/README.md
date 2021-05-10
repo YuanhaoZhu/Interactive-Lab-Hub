@@ -66,14 +66,18 @@ I think I need to change the audio output into [USB speaker](https://www.adafrui
 <img src="https://cdn-shop.adafruit.com/1200x900/3369-00.jpg" height=300>
 
 
-[Using a USB Audio Device with the Raspberry Pi](https://www.raspberrypi-spy.co.uk/2019/06/using-a-usb-audio-device-with-the-raspberry-pi/)
-````
-pi@ixe00:~ $ lsusb
-Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-Bus 001 Device 003: ID 04d8:0c02 Microchip Technology, Inc. 
-Bus 001 Device 004: ID 1908:2070 GEMBIRD 
-Bus 001 Device 002: ID 2109:3431 VIA Labs, Inc. Hub
-Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+In order to make us hear again (being deaf from previous SPK plug in stero speaker), we need to [update the ALSA config](https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/updating-alsa-config).
+> All we have to do is tell Raspbian to look at "card #1" for the default audio. Card #0 is the built in audio, so this is fairly straightforward.
 
-````
+> Run sudo nano /usr/share/alsa/alsa.conf and look for the following two lines:
+> ````
+> defaults.ctl.card 0
+> defaults.pcm.card 0
+> ````
+> Change both “0” to “1” and then save the file. That’s it!
+
+<img src="https://user-images.githubusercontent.com/46579769/117607237-8c446480-b129-11eb-81b3-e4d3ea06b603.png" height=400>
+
+I found other usefull links to connect USB speaker to pi:[Using a USB Audio Device with the Raspberry Pi](https://www.raspberrypi-spy.co.uk/2019/06/using-a-usb-audio-device-with-the-raspberry-pi/). But I think above method is more straightforward and easy.
+
 
