@@ -35,3 +35,16 @@ You can and are not required to work in teams. Be clear in documentation who con
 
 [Here is a list of good final projects from previous classes.](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Previous-Final-Projects)
 This version of the class is very different, but it may be useful to see these.
+
+
+# Documentation
+Material:
+
+### Intall web browser
+Reference: [Installing the Chromium Web Browser on a Raspberry Pi](https://pimylifeup.com/raspberry-pi-chromium-browser/)
+````
+pi@ixe00:~ $ sudo apt update
+pi@ixe00:~ $ sudo apt full-upgrade
+pi@ixe00:~ $ sudo apt install chromium-browser -y
+````
+
