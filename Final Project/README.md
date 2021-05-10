@@ -83,7 +83,7 @@ I found other usefull links to connect USB speaker to pi:[Using a USB Audio Devi
 After testing, my speaker is finally working! :ear:
 
 ### Prepare web server
-
+Create virtual environment
 ```
 pi@ixe00:~ $ virtualenv woz
 pi@ixe00:~ $ source woz/bin/activate
