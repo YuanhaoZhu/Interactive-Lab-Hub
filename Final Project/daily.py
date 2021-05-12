@@ -20,11 +20,11 @@ buttonRed.LED_off()
 # initializing the constructor
 pygame.init()
 
-#frame counter
-frame = 1
+
 #Score for COVID indicator
 score = 0
 
+frame =1
 
 
 # screen resolution
@@ -66,7 +66,8 @@ bg1 = pygame.transform.scale(bg1, (800,480))
 bg2 = pygame.image.load('screen2.png').convert()
 bg2 = pygame.transform.scale(bg2, (800,480))
 
-
+bg3 = pygame.image.load('screen3.png').convert()
+bg3 = pygame.transform.scale(bg3, (800,480))
 
 
 left_padding = 100
@@ -74,103 +75,174 @@ left_padding = 100
 
 
 def IntroScreen():
-	# stores the (x,y) coordinates into
-	# the variable as a tuple
-	mouse = pygame.mouse.get_pos()
-	for ev in pygame.event.get():
-		
-		if ev.type == pygame.QUIT:
-			pygame.quit()
+	while True:
+		global frame
+		frame = 1
+
+		# stores the (x,y) coordinates into
+		# the variable as a tuple
+		mouse = pygame.mouse.get_pos()
+		for ev in pygame.event.get():
 			
-		#checks if a mouse is clicked
-		if ev.type == pygame.MOUSEBUTTONDOWN:
-			#if the mouse is clicked on the button the game is terminated
-			if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+			if ev.type == pygame.QUIT:
 				pygame.quit()
-			
 				
-	# fills the screen with a color
-	screen.fill(white)
-	rectbg1 = bg1.get_rect()
+			#checks if a mouse is clicked
+			if ev.type == pygame.MOUSEBUTTONDOWN:
+				#if the mouse is clicked on the button the game is terminated
+				if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+					pygame.quit()
+				
+					
+		# fills the screen with a color
+		screen.fill(white)
+		rectbg1 = bg1.get_rect()
 
-	rectbg1 = rectbg1.move((0, 0))
-	screen.blit(bg1, rectbg1)
-	# screen.blit(bg1, (0, 0))
+		rectbg1 = rectbg1.move((0, 0))
+		screen.blit(bg1, rectbg1)
+		# screen.blit(bg1, (0, 0))
 
-	# if mouse is hovered on a button it
-	# changes to lighter shade
-	if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
-		pygame.draw.rect(screen,color_light,[left_padding,20,140,40])
+		# if mouse is hovered on a button it
+		# changes to lighter shade
+		if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+			pygame.draw.rect(screen,color_light,[left_padding,20,140,40])
+			
+		else:
+			pygame.draw.rect(screen,color_dark,[left_padding,20,140,40])
 		
-	else:
-		pygame.draw.rect(screen,color_dark,[left_padding,20,140,40])
-	
-	# superimposing the text onto our button
-	screen.blit(text , (left_padding+50,25))
+		# superimposing the text onto our button
+		screen.blit(text , (left_padding+50,25))
 
 
-	
-	# updates the frames of the game
-	pygame.display.update()
+		
+		# updates the frames of the game
+		pygame.display.update()
 
-	buttonRed.LED_on(50)
-	buttonGreen.LED_on(50)
-	# if buttonGreen.is_button_pressed():
-	# 	frame = 2
-	# 	break	
-	# elif buttonRed.is_button_pressed():
-	# 	pygame.quit()
-
-	# print(frame)
+		buttonRed.LED_on(50)
+		buttonGreen.LED_on(50)
+		if buttonGreen.is_button_pressed():
+			frame = 2
+			break
+		elif buttonRed.is_button_pressed():
+			pygame.quit()
+				
+		
 
 
 def secScreen():
-	for ev in pygame.event.get():
-		
-		if ev.type == pygame.QUIT:
-			pygame.quit()
+	while True:
+		for ev in pygame.event.get():
 			
-		#checks if a mouse is clicked
-		if ev.type == pygame.MOUSEBUTTONDOWN:
-			#if the mouse is clicked on the button the game is terminated
-			if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+			if ev.type == pygame.QUIT:
 				pygame.quit()
 				
-	# fills the screen with a color
-	screen.fill(white)
-	rectbg2 = bg2.get_rect()
+			#checks if a mouse is clicked
+			if ev.type == pygame.MOUSEBUTTONDOWN:
+				#if the mouse is clicked on the button the game is terminated
+				if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+					pygame.quit()
+					
+		# fills the screen with a color
+		screen.fill(white)
+		rectbg2 = bg2.get_rect()
 
-	rectbg2 = rectbg2.move((0, 0))
-	screen.blit(bg2, rectbg2)
-	# screen.blit(bg1, (0, 0))
+		rectbg2 = rectbg2.move((0, 0))
+		screen.blit(bg2, rectbg2)
+		# screen.blit(bg1, (0, 0))
 
-	# stores the (x,y) coordinates into
-	# the variable as a tuple
-	mouse = pygame.mouse.get_pos()
-	
-	# if mouse is hovered on a button it
-	# changes to lighter shade
-	if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
-		pygame.draw.rect(screen,color_light,[left_padding,20,140,40])
-		
-	else:
-		pygame.draw.rect(screen,color_dark,[left_padding,20,140,40])
-	
-	# superimposing the text onto our button
-	screen.blit(text , (left_padding+50,25))
-	
-	# updates the frames of the game
-	pygame.display.update()
+		# stores the (x,y) coordinates into
+		# the variable as a tuple
+		mouse = pygame.mouse.get_pos()
+
+		# if mouse is hovered on a button it
+		# changes to lighter shade
+		if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+			pygame.draw.rect(screen,color_light,[left_padding,20,140,40])
+			
+		else:
+			pygame.draw.rect(screen,color_dark,[left_padding,20,140,40])
+
+		# superimposing the text onto our button
+		screen.blit(text , (left_padding+50,25))
+
+		# updates the frames of the game
+		pygame.display.update()
+
+		if buttonGreen.is_button_pressed():
+			global frame
+			frame = 3
+			break
+		elif buttonRed.is_button_pressed():
+			pygame.quit()
+			frame = 3
+			global score 
+			score = 1
+			break
+			
+def thirdScreen():
+	while True:
+		for ev in pygame.event.get():
+			
+			if ev.type == pygame.QUIT:
+				pygame.quit()
+				
+			#checks if a mouse is clicked
+			if ev.type == pygame.MOUSEBUTTONDOWN:
+				#if the mouse is clicked on the button the game is terminated
+				if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+					pygame.quit()
+					
+		# fills the screen with a color
+		screen.fill(white)
+		rectbg3 = bg3.get_rect()
+
+		rectbg3 = rectbg3.move((0, 0))
+		screen.blit(bg3, rectbg3)
+		# screen.blit(bg1, (0, 0))
+
+		# stores the (x,y) coordinates into
+		# the variable as a tuple
+		mouse = pygame.mouse.get_pos()
+
+		# if mouse is hovered on a button it
+		# changes to lighter shade
+		if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+			pygame.draw.rect(screen,color_light,[left_padding,20,140,40])
+			
+		else:
+			pygame.draw.rect(screen,color_dark,[left_padding,20,140,40])
+
+		# superimposing the text onto our button
+		screen.blit(text , (left_padding+50,25))
+
+		# updates the frames of the game
+		pygame.display.update()
+
+		if buttonGreen.is_button_pressed():
+			global frame
+			frame = 3
+			break
+		elif buttonRed.is_button_pressed():
+			pygame.quit()
+			# frame = 3
+			# global score 
+			# score = 1
+			# break
+
 
 
 
 
 while True:
+	print(frame)
 	IntroScreen()
-	if buttonGreen.is_button_pressed():
-		break
+	if frame == 1:
+		IntroScreen()
+	if frame == 2:
+		secScreen()
+	if frame == 3:
+		thirdScreen()
 
-	secScreen()
 
 	
 	
