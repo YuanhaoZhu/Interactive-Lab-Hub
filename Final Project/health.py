@@ -37,9 +37,9 @@ root.after(5000, root.destroy)
 # --- canvas ---
 
 canvas = tk.Canvas(root)
-canvas.pack(fill='both', expand=True)
+canvas.pack(fill='none', expand=True)
 
-canvas.create_oval((0, 0, screen_width, screen_height), fill='red', outline='')
+# canvas.create_oval((0, 0, screen_width, screen_height), fill='red', outline='')
 
 # load the .gif image file
 gif1 = PhotoImage(file='panda.png')
@@ -58,3 +58,5 @@ canvas.create_text(200,200 ,fill="darkblue",
 # --- start ---
 
 root.mainloop()
+
+exec(open("display.py").read())
