@@ -115,7 +115,8 @@ def showTemp(temp):
     oled.image(imageTemp)
     oled.show()
 #measure for one minutes
-countDown = 60
+countDown = 30
+
 while True:
     playsound('/home/pi/Interactive-Lab-Hub/Final Project/temp_start.mp3')
     playsound('beep.mp3')
