@@ -89,3 +89,6 @@ After testing, my speaker is finally working! :ear:
 I've searching some ways to let pi directly write into the HDMI connected screen. 
 Our TA @Ilan Mandel said I could use [pygame](https://www.pygame.org/news), which is well documented. 
 However,[I found this example that creates fullscreen window, without borders, always on top](https://stackoverflow.com/questions/47856817/tkinter-canvas-based-kiosk-like-program-for-raspberry-pi?answertab=active#tab-top). I think this one would be easier than pygame.
+
+
+[Final Video](https://youtu.be/wWpC-DhkWuY)
