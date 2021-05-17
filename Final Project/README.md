@@ -29,7 +29,7 @@ Your project is to design and build an interactive device to suit a specific app
 
 ## Teams
 
-I worked on my own.
+Yuanhao Zhu --> I worked on my own.
 
 ## Examples
 
