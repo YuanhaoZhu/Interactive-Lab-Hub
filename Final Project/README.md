@@ -120,6 +120,8 @@ I used online [text-to-speech services](https://ttsmp3.com/) to generate voice n
 ## Video of my friend using the Daily Check Machine for the first time
 [Final Video](https://youtu.be/wWpC-DhkWuY)
 
+[![image](https://user-images.githubusercontent.com/46579769/118443201-9f22e000-b6b9-11eb-9226-b6a2c242fc0b.png)](https://youtu.be/wWpC-DhkWuY)
+
 ## Reflections on process
 What have you learned or wish you knew at the start?
 1. I think Tkinter would be better than pygame for this project. when implementing the quit button, the mouse click events is associated with an area of the canvas. When you need to change the position of the button, you need to change both the shapes of the button, but also the range of when to respond to click event.
