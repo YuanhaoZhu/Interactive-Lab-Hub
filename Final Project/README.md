@@ -85,10 +85,12 @@ I found other usefull links to connect USB speaker to pi:[Using a USB Audio Devi
 
 After testing, my speaker is finally working! :ear:
 
-### Write into HDMI 
+### Write Daily Check program
 I've searching some ways to let pi directly write into the HDMI connected screen. 
-Our TA @Ilan Mandel said I could use [pygame](https://www.pygame.org/news), which is well documented. 
-However,[I found this example that creates fullscreen window, without borders, always on top](https://stackoverflow.com/questions/47856817/tkinter-canvas-based-kiosk-like-program-for-raspberry-pi?answertab=active#tab-top). I think this one would be easier than pygame.
+Our TA @Ilan Mandel said I could use [pygame](https://www.pygame.org/news). 
+I found another python toolkit to enable full screen on HDMI screen is [tkinter](https://realpython.com/python-gui-tkinter/), with [example I found](https://stackoverflow.com/questions/47856817/tkinter-canvas-based-kiosk-like-program-for-raspberry-pi?answertab=active#tab-top). 
+After a few trials, I finally settled with pygame (but when I look back I think tkinter might be a better choice, because it's easier to work with buttons). 
+
 
 
 [Final Video](https://youtu.be/wWpC-DhkWuY)
