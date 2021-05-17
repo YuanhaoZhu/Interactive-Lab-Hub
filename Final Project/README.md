@@ -29,7 +29,7 @@ Your project is to design and build an interactive device to suit a specific app
 
 ## Teams
 
-You can and are not required to work in teams. Be clear in documentation who contributed what. The total project contributions should reflect the number of people on the project.
+I worked on my own.
 
 ## Examples
 
@@ -42,6 +42,9 @@ Material:
 - [HDMI 4 Pi: 5" Display w/Touch and Mini Driver - 800x480 HDMI](https://www.adafruit.com/product/2109)
 - [USB speaker](https://www.adafruit.com/product/3369)
 - [Stereo Enclosed Speaker Set - 3W 4 Ohm](https://www.adafruit.com/product/1669)- Not Used in the end
+- OLED screen
+- High accuracy temperature sensor
+- Clear bricks
 
 ### Install web browser
 Reference: [Installing the Chromium Web Browser on a Raspberry Pi](https://pimylifeup.com/raspberry-pi-chromium-browser/)
@@ -85,11 +88,32 @@ I found other usefull links to connect USB speaker to pi:[Using a USB Audio Devi
 
 After testing, my speaker is finally working! :ear:
 
-### Write Daily Check program
+### Write Main Daily Check program
 I've searching some ways to let pi directly write into the HDMI connected screen. 
 Our TA @Ilan Mandel said I could use [pygame](https://www.pygame.org/news). 
 I found another python toolkit to enable full screen on HDMI screen is [tkinter](https://realpython.com/python-gui-tkinter/), with [example I found](https://stackoverflow.com/questions/47856817/tkinter-canvas-based-kiosk-like-program-for-raspberry-pi?answertab=active#tab-top). 
 After a few trials, I finally settled with pygame (but when I look back I think tkinter might be a better choice, because it's easier to work with buttons). 
+
+I used Figma to design the UI of the Daily Check Machine, exported the unclickable elements, and imported them as .png into the pygame file. 
+
+**Below is the user flow and my UI design of the Daily Check Machine**
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Final%20Project/final_project_userflow.png">
+
+[Here is my main portion pygame code](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Final%20Project/daily.py)
+Some other details to be noted: I imported [playsound](https://pypi.org/project/playsound/) to let pygame play sound (It also requires other packages and dependencies, but I lost track of them). I noticed once you imported the pygame, and initiate it, the entire .py file follows the pygame rule. So some method that I used to control the OLED screen etc., doesn't work inside pygame anymore. 
+
+### Design and implement OLED screen and thermometer
+
+**Below is my design of OLED display**
+
+I used online [text-to-speech services](https://ttsmp3.com/) to generate voice notification, which helps users to correct control the timing of the thermometer. In addition, I also added "bell-ring" sound. The temperature sensor takes time to get stable value (it's similar to the analog Mercury thermometer). I tested a few times, and find about 1 minutes is a good time range to let readings climbing from room temperature to body temperature. 
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Final%20Project/OLED_design.png">
+
+[Here is OLED code](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Final%20Project/OLED.py)
+
+
 
 
 
