@@ -101,6 +101,7 @@ I used Figma to design the UI of the Daily Check Machine, exported the unclickab
 <img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Final%20Project/final_project_userflow.png">
 
 [Here is my main portion pygame code](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Final%20Project/daily.py)
+
 Some other details to be noted: I imported [playsound](https://pypi.org/project/playsound/) to let pygame play sound (It also requires other packages and dependencies, but I lost track of them). I noticed once you imported the pygame, and initiate it, the entire .py file follows the pygame rule. So some method that I used to control the OLED screen etc., doesn't work inside pygame anymore. 
 
 ### Design and implement OLED screen and thermometer
@@ -116,5 +117,41 @@ I used online [text-to-speech services](https://ttsmp3.com/) to generate voice n
 
 
 
-
+## Video of my friend using the Daily Check Machine for the first time
 [Final Video](https://youtu.be/wWpC-DhkWuY)
+
+## Reflections on process
+What have you learned or wish you knew at the start?
+1. I think Tkinter would be better than pygame for this project. when implementing the quit button, the mouse click events is associated with an area of the canvas. When you need to change the position of the button, you need to change both the shapes of the button, but also the range of when to respond to click event.
+````
+for ev in pygame.event.get():
+			
+			if ev.type == pygame.QUIT:
+				pygame.quit()
+				
+			#checks if a mouse is clicked
+			if ev.type == pygame.MOUSEBUTTONDOWN:
+				#if the mouse is clicked on the button the game is terminated
+# you need to change here
+				if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+					pygame.quit()
+ 
+ 
+# You need to change here too!
+		if left_padding <= mouse[0] <= left_padding+140 and 20 <= mouse[1] <= 20+40:
+			pygame.draw.rect(screen,color_light,[left_padding,20,140,40])
+			
+		else:
+			pygame.draw.rect(screen,color_dark,[left_padding,20,140,40])
+````
+This feels like you're pressing a button that's printed on a sheet of paper. The button it's self is not an object. Whereas in tkinter, button looks more manageble. 
+````
+button = tk.Button(
+    text="Click me!",
+    width=25,
+    height=5,
+    bg="blue",
+    fg="yellow",
+)
+````
+2. I feels like everyone is getting vaccinated and no longer needs the Daily Check any more. But the thermometer becomes a handy tool. When I got me second dose vaccine (right after the presentation), I got fever but I don't have a real thermometer. I ran the OLED.py and did get a convincing value (about 38 degrees Celsius, in fever range). At the same time, I realized that my rough tuning of the temperature sensor really worked. I added 3 degrees on the original reading from the temperature sensor [code I used for testing sensor](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Final%20Project/temp.py), because I noticed the sensor cannot be placed very tight on human skin, and the body temperature reading was always about 3 degrees lower.
