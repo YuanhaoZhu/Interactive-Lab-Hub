@@ -45,6 +45,8 @@ Material:
 - OLED screen
 - High accuracy temperature sensor
 - Clear bricks
+- red LED button
+- green LED button
 
 ### Install web browser
 Reference: [Installing the Chromium Web Browser on a Raspberry Pi](https://pimylifeup.com/raspberry-pi-chromium-browser/)
@@ -157,3 +159,4 @@ button = tk.Button(
 )
 ````
 2. In the near future, we no longer needs the Daily Check any more, but the thermometer has already become a handy tool to me. When I got my second dose vaccine (right after the presentation), I got fever but I don't have a real thermometer. I ran the OLED.py and did get a convincing value (about 38 degrees Celsius, in fever range). At the same time, I realized that my rough tuning of the temperature sensor really worked. I added 3 degrees on the original reading from the temperature sensor [(code I used for testing sensor)](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/blob/Spring2021/Final%20Project/temp.py), because I noticed the sensor cannot be placed very tight on human skin, and the body temperature reading was always about 3 degrees lower. I addition, I did see the advantage of infared thermometer for how fast it get the reading, but I also feels it's fun to play with my thermomether to see the analog mercury bar on the OLED screen going up and down.
+3. On this project, I spent almost an entire day searching for how to write a program that can be full screen on HDMI connected display and leaving less time on actually designing and coding. The planning of time is not wise, but I did learn a lot about pygame and tkinter.  I also wrote a scratch program with tkinter and abandon it the next day. The entire process is stressful but also enjoyable.
